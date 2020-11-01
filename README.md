@@ -48,11 +48,23 @@ Orange is the most energetic colour and for this reason it was selected a colour
                 starting date;  
                 deadline;
 
-### 2.5 __Wireframes__:  
-  * ![alt text](assets/images/wireframes/Home-desktopandtablet.png "wireframe for Home page in desktop and tablet view");  
-  * ![alt text](assets/images/wireframes/Home-mobile.png "wireframe for Home page in mobile view");  
-  * ![alt text](assets/images/wireframes/MyProgress-Desktop&Tablet.png "wireframe for My progress page in desktop and tablet view");  
-  * ![alt text](assets/images/wireframes/MyProgress-mobile.png "wireframe for My progress page in mobile view");  
-  * ![alt text](assets/images/wireframes/NewGoal-desktop&tablet.png "wireframe for New Goal page in desktop and tablet view");  
-  * ![alt text](assets/images/wireframes/NewGoal-mobile.png "wireframe for New Goal page in mobile view");
+### 2.5 __Wireframes__:
+
+  * Home page in desktop and tablet view:  
+  ![alt text](assets/images/wireframes/Home-desktopandtablet.png "wireframe for Home page in desktop and tablet view");
+
+  * Home page in mobile view:  
+  ![alt text](assets/images/wireframes/Home-Mobile.png "wireframe for Home page in mobile view");
+
+  * My progress page in desktop and tablet view:  
+  ![alt text](assets/images/wireframes/MyProgress-Desktop&Tablet.png "wireframe for My progress page in desktop and tablet view");
+
+  * My progress page in mobile view:  
+  ![alt text](assets/images/wireframes/MyProgress-mobile.png "wireframe for My progress page in mobile view");
+
+  * New Goal page in desktop and tablet view:  
+  ![alt text](assets/images/wireframes/NewGoal-desktop&tablet.png "wireframe for New Goal page in desktop and tablet view");
+
+  * New Goal page in mobile view:  
+  ![alt text](assets/images/wireframes/NewGoal-mobile.png "wireframe for New Goal page in mobile view");
     
