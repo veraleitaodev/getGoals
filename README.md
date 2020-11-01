@@ -29,14 +29,16 @@
 
   * __Header__ (this feature is present in every page):  
     a) __Logo__ on the Left side with link to home page;  
-    b)  __Add__ add button that links to the Goals form page;
+    b) __3 vertical dots__ (mobile view) on the right side of navigation bar - opens into a menu with links to Home, My Progress and New Goal pages;  
+    c) __Pages Links__ (desktop view) links to Home, My Progress and New Goal pages.
 
   * __Footer__ (this feature is present in every page):  
     a) __social media Icons__ - with link to social media pages;
 
   * __Home page__:   
     a) header and footer as explained above;  
-    b) __goals overview__ 3 card with a goal each are present on the home page. These cards are static as there is no backend support for the data added to the form;   
+    b)__Add__ add button that links to the Goals form page - mobile size screen only;  
+    c) __goals overview__ 3 card with a goal each are present on the home page. These cards are static as there is no backend support for the data added to the form;   
 
   * __Goals form page__(the forms in this page are disabled as there is no backend support at this stage):  
     a) header and footer as axplained above;  
@@ -49,4 +51,4 @@
                 starting date;  
                 deadline;
 
- 
+                
