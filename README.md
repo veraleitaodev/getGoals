@@ -6,27 +6,24 @@
 
 ## 2. UX
 
-  * __Typography__
+### 2.1 __Typography__
 
     Fonts selected:  
     _Red Rose_ for title;  
     _Noto Sans_ throughout work;
 
-  * __Colour Scheme__
-  
-    Orange is the most energetic colour and for this reason it was selected a colour scheme with orange tones with use of [ adobe color ](color.adobe.com).  
+### 2.2 __Colour Scheme__: 
+Orange is the most energetic colour and for this reason it was selected a colour scheme with orange tones with use of [ adobe color ](color.adobe.com).  
 ![alt text](assets/images/colour-scheme.jpeg "generated colour scheme") 
 
 
-## 3. User Story:
-
+### 2.3 __User Story__:
   * as user should be able to add goals;
   * as visiting user should be able to visit my goals;
-  * as user should be able to edit goals;
+  * as user should be able to edit goals; 
 
 
-## 4. Features:
-
+### 2.4 __Features__:
   * __Header__ (this feature is present in every page):  
     a) __Logo__ on the Left side with link to home page;  
     b) __3 vertical dots__ (mobile view) on the right side of navigation bar - opens into a menu with links to Home, My Progress and New Goal pages;  
@@ -51,4 +48,4 @@
                 starting date;  
                 deadline;
 
-                
+### 2.5
