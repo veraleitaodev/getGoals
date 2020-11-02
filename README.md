@@ -58,7 +58,7 @@ Orange is the most energetic colour and for this reason it was selected a colour
 
   * [My progress page in mobile view](assets/images/wireframes/MyProgress-mobile.png "wireframe for My progress page in mobile view");
 
-  * [New Goal page in desktop and tablet view](assets/images/wireframes/desktop&tablet.jpeg "wireframe for New Goal page in desktop and tablet view") 
+  * [New Goal page in desktop and tablet view](assets/images/wireframes/NewGoal-desktop&tablet.png "wireframe for New Goal page in desktop and tablet view") 
 
   * [New Goal page in mobile view](assets/images/wireframes/NewGoal-mobile.png "wireframe for New Goal page in mobile view");
     
