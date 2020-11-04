@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SetGoals</title>
-</head>
-<body>
+{% extende base.html %}
+{% block content %}
+    
     {% for goal in goals %}
         {{ goal.goal_title }}<br>
         {{ goal.category_name }}<br>
         {{ goal.goal_description }}<br>
         {{ goal.due_date }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}
