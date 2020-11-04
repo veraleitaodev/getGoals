@@ -13,7 +13,7 @@
     _Noto Sans_ throughout work;
 
 ### 2.2 __Colour Scheme__: 
-__Blue__ is the most popular colour and __orange__ is the most energetic colour.  
+__Blue__ is the most popular colour and __orange__ is the most energetic colour. 
 Setting goals requires both a desire for improvement and energy to do so, and for this reason it was selected a trending scheme colour including both, blue and orange using [ adobe color ](color.adobe.com) software.  
 ![alt text](assets/images/colorScheme.png "generated colour scheme") 
 
@@ -51,17 +51,25 @@ Setting goals requires both a desire for improvement and energy to do so, and fo
 
 ### 2.5 __Wireframes__:
 
-  * [Home page in desktop and tablet view](assets/images/wireframes/Home-desktopandtablet.png "wireframe for Home page in desktop and tablet view");
+  * [Register page in desktop and tablet view](assets/images/wireframes/register_dt.png "wireframe for register page in desktop and tablet view");
 
-  * [Home page in mobile view](assets/images/wireframes/Home-Mobile.png "wireframe for Home page in mobile view");
+  * [Register page in mobile view](assets/images/wireframes/register_mobile.png "wireframe for register page in mobile view");
+  
+  * [Login page in desktop and tablet view](assets/images/wireframes/login_dt.png "wireframe for login page in desktop and tablet view");
+  
+  * [Login page in mobile view](assets/images/wireframes/login_mobile.png "wireframe for login page in mobile view");
+  
+  * [Home page in desktop and tablet view](assets/images/wireframes/home_dt.png "wireframe for Home page in desktop and tablet view");
 
-  * [My progress page in desktop and tablet view](assets/images/wireframes/MyProgress-Desktop&Tablet.png "wireframe for My progress page in desktop and tablet view");
+  * [Home page in mobile view](assets/images/wireframes/home_mobile.png "wireframe for Home page in mobile view");
 
-  * [My progress page in mobile view](assets/images/wireframes/MyProgress-mobile.png "wireframe for My progress page in mobile view");
+  * [New Goal page in desktop and tablet view](assets/images/wireframes/newGoal_dt.png "wireframe for My progress page in desktop and tablet view");
 
-  * [New Goal page in desktop and tablet view](assets/images/wireframes/NewGoal-desktop&tablet.png "wireframe for New Goal page in desktop and tablet view") 
+  * [New Goal page in mobile view](assets/images/wireframes/newGoal_mobile.png "wireframe for New Goal page in mobile view");
 
-  * [New Goal page in mobile view](assets/images/wireframes/NewGoal-mobile.png "wireframe for New Goal page in mobile view");
+  * [Goal page in desktop and tablet view](assets/images/wireframes/goalPage_dt.png "wireframe for Goal page in desktop and tablet view") 
+
+  * [Goal page in mobile view](assets/images/wireframes/goalPage_mobile.png "wireframe for New Goal page in mobile view");
     
 
 ___
