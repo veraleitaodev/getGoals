@@ -13,8 +13,9 @@
     _Noto Sans_ throughout work;
 
 ### 2.2 __Colour Scheme__: 
-Orange is the most energetic colour and for this reason it was selected a colour scheme with orange tones with use of [ adobe color ](color.adobe.com).  
-![alt text](assets/images/colour-scheme.jpeg "generated colour scheme") 
+__Blue__ is the most popular colour and __orange__ is the most energetic colour.  
+Setting goals requires both a desire for improvement and energy to do so, and for this reason it was selected a trending scheme colour including both, blue and orange using [ adobe color ](color.adobe.com) software.  
+![alt text](assets/images/colorScheme.png "generated colour scheme") 
 
 
 ### 2.3 __User Story__:
@@ -62,3 +63,10 @@ Orange is the most energetic colour and for this reason it was selected a colour
 
   * [New Goal page in mobile view](assets/images/wireframes/NewGoal-mobile.png "wireframe for New Goal page in mobile view");
     
+
+___
+
+test
+
+manual testing:  
+  - testing pages are linked, once created, example css test with background colour in preview to test if link was functional
