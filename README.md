@@ -72,9 +72,18 @@ Setting goals requires both a desire for improvement and energy to do so, and fo
   * [Goal page in mobile view](assets/images/wireframes/goalPage_mobile.png "wireframe for New Goal page in mobile view");
     
 
-___
+## 3.Technologies and Libraries
 
-test
 
-manual testing:  
-  - testing pages are linked, once created, example css test with background colour in preview to test if link was functional
+## 4.Resources and Tools
+## 5.Tests
+
+  ### 5.1.Validation
+  ### 5.2.Manual Testing
+  
+  * testing pages are linked, once created, example css test with background colour in preview to test if link was functional
+  * testing code with inspect feature of Chrome browser
+
+## 6.Deployment
+
+## 7.Credits
