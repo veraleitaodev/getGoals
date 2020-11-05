@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600&family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-1: #C09CD9;
+  --color-2: #7D60A6;
+  --color-3: #353FF2;
+  --color-4: #A69C0F;
+  --color-5: #D9CC1E;
+  --color-6: #0D0D0D;
+  --color-7: rgba(13, 13, 13, 0.5);
+  --color-8: white;
+  --color-9: #DCDCDC;
+  --color-10: #A9A9A9;
+}
+
+/*--Navigation--*/
+
+.nav-wrapper {
+    background-color: var(--color-4);
+    box-shadow: 0px 0px 10px 5px var(--color-10);
+}
+
+a.brand-logo {
+    font-family: "Advent Pro", sans-serif;
+    font-size: 24px;
+    color: var(--color-3);
+    font-weight: 600;
+}
+
+i.material-icons.logo-icon,
+li i.material-icons.logo-icon {
+    color: var(--color-2);
+    margin-right: 0 !important; /*--used !important to overwrite materialize settings--*/
+}
+
+i.material-icons.menu-icon {
+    color: var(--color-3);
+    text-shadow: 2px 2px 2px var(--color-7);
+}
+

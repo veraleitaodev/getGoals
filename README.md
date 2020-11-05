@@ -13,9 +13,8 @@
     _Noto Sans_ throughout work;
 
 ### 2.2 __Colour Scheme__: 
-__Blue__ is the most popular colour and __orange__ is the most energetic colour. 
-Setting goals requires both a desire for improvement and energy to do so, and for this reason it was selected a trending scheme colour including both, blue and orange using [ adobe color ](color.adobe.com) software.  
-![alt text](assets/images/colorScheme.png "generated colour scheme") 
+Selected a trending scheme colour including lively colours, inspired by this [photo](https://www.behance.net/gallery/45528461/Selectologie) using [ adobe color ](color.adobe.com) software.  
+![alt text](assets/images/colours.jpeg "generated colour scheme") 
 
 
 ### 2.3 __User Story__:
@@ -78,12 +77,19 @@ Setting goals requires both a desire for improvement and energy to do so, and fo
 ## 4.Resources and Tools
 ## 5.Tests
 
-  ### 5.1.Validation
-  ### 5.2.Manual Testing
-  
-  * testing pages are linked, once created, example css test with background colour in preview to test if link was functional
-  * testing code with inspect feature of Chrome browser
+  ### 5.1. Validation
 
-## 6.Deployment
+  ### 5.2. Manual Testing
+  * Testing pages are linked, once created, example css test with background colour in preview to test if link was functional
+  * Testing code with inspect feature of Chrome browser
 
-## 7.Credits
+## 6. Bugs Known
+
+  ### 6.1 Bugs resolved. 
+  * Once on collapible navbar menu the menu would not expand - console showing error. This was corrected by correcting the jquery script in the base.html.  
+  * 
+
+
+## 7. Deployment
+
+## 8. Credits
