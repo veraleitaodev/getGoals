@@ -27,18 +27,18 @@
           <nav>
             <div class="nav-wrapper">
             <div class="container">
-              <a href="#!" class="brand-logo"
-                ><i class="material-icons logo-icon">radio_button_checked</i>SetGoals</a
+              <a href="{{ url_for('set_goals') }}" class="brand-logo"
+                ><i class="material-icons logo-icon prefix">radio_button_checked</i>SetGoals</a
               >
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"
                 ><i class="material-icons menu-icon">more_vert</i></a
               >
               <ul class="right hide-on-med-and-down">
-                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('set_goals') }}">Home</a></li>
                 <li><a href="#">New Goal</a></li>
                 <li><a href="#">Login</a></li>
                 <li><a href="#">Logout</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
               </ul>
             </div>
             </div>
@@ -47,13 +47,13 @@
         <!--Mobile sidenav-->
         <ul class="sidenav" id="mobile-demo">
           <li><a href="#!" class="brand-logo"
-                ><i class="material-icons logo-icon">radio_button_checked</i>SetGoals</a
+                ><i class="material-icons logo-icon prefix">radio_button_checked</i>SetGoals</a
               ></li>
-          <li><a href="#">Home</a></li>
+          <li><a href="{{ url_for('set_goals') }}">Home</a></li>
           <li><a href="#">New Goal</a></li>
           <li><a href="#">Login</a></li>
           <li><a href="#">Logout</a></li>
-          <li><a href="#">Register</a></li>
+          <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
       </header>
       {% block content %} {% endblock %}

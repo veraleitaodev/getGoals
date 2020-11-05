@@ -50,3 +50,10 @@ i.material-icons.menu-icon {
     text-shadow: 2px 2px 2px var(--color-7);
 }
 
+/*-- Register page --*/
+.register-container {
+    margin-top: 50px;
+}
+button.btn.waves-effect.waves-light {
+    background-color: var(--color-1);
+}
