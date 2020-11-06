@@ -54,6 +54,10 @@ i.material-icons.menu-icon {
 .register-container {
     margin-top: 50px;
 }
-button.btn.waves-effect.waves-light {
+button.btn.submit-button {
     background-color: var(--color-1);
+}
+i.material-icons.form-icon.prefix {
+    color: var(--color-5);
+    text-shadow: 2px 2px 2px var(--color-7);
 }
