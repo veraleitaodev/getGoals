@@ -90,6 +90,16 @@ def login():
 
 @app.route("/new_goal", methods=["GET", "POST"])
 def new_goal():
+    if request.method == "POST":
+        select = request.form.get("category_name")
+        new_goal = {
+                "category_name": request.form.get(str(select)),
+                "goal_title": request.form.get("goal_title"),
+                "goal_description": request.form.get("goal_description"),
+                "due_date": request.form.get("due_date"),
+            }
+        mongo.db.goals.insert_one(new_goal)
+
     return render_template("new-goal.html")
 
 
