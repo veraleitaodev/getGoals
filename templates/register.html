@@ -2,29 +2,30 @@
 
 <div class="container register-container">
   <div class="row">
-    <form class="col s12 m8 offset-m2">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons form-icon prefix">account_circle</i>
           <input
-            id="name"
+            id="username"
+            name="username"
             type="text"
-            class="validate"
-          />
+            class="validate" minlength="6" maxlength="12" pattern="^[a-zA-Z0-9]{6,12}$" required/>
           <label for="username">Username</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons form-icon prefix">email</i>
-          <input id="email" name="email" type="email" class="validate" />
+          <input id="email" name="email" type="email" class="validate" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" required/> 
+          <!--pattern for email validation obtained at https://stackoverflow.com/questions/17464404/html5-pattern-attribute-not-matching-for-emailusergmail-com -->
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons form-icon prefix">lock</i>
-          <input id="password" name="password" type="password" class="validate" />
+          <input id="password" name="password" type="password" class="validate" minlength="6" maxlength="12" pattern="^[a-zA-Z0-9]{6,12}$" required/>
           <label for="password">Password</label>
         </div>
       </div>
@@ -40,4 +41,4 @@
   </div>
 </div>
 
-{% endblock %}
+{% endblock %} 

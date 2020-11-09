@@ -56,7 +56,31 @@
           <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
       </header>
+      <section>
+      <!-- messages from Flash -->
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12 m8 offset-m2">
+                        <div class="card-panel flashed_messages center-align">
+                            <span class="white-text">{{ message }}
+                            </span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+      {% endwith %}
+      </section>
+      <main>
       {% block content %} {% endblock %}
+      </main>
+      <footer>
+      
+      </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>

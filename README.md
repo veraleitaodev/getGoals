@@ -82,14 +82,41 @@ Selected a trending scheme colour including lively colours, inspired by this [ph
   ### 5.2. Manual Testing
   * Testing pages are linked, once created, example css test with background colour in preview to test if link was functional
   * Testing code with inspect feature of Chrome browser
+  * Testing register.html by input
+
+    | input                              | expected result             | actual result                 |
+    | :--------------------------------: | :-------------------------: | :---------------------------: |
+    | new username & email               | flash message: "You are now registered!"   | flash message: "You are now registered!"     |
+    |  existing username                  | flash message: "Username already exists"   | flash message: "Username already exists"     |
+    |  new username & existing email      | flash message: "Email already exists"      | flash message: "Email already exists"        |
+    |  blank spaces in all fields         | input error alert | flash message: "You are now registered!" |
+    
+as the expected result and actual result was different for blank spaces input, I had to specify the length and type of characters acceptable.  
+In order to test input field new requirements:  
+    | input                              | expected result             | actual result                 |
+    | :--------------------------------: | :-------------------------: | :---------------------------: |
+    | blank spaces in all fields         | input error alert         | input error alert |
+    | username less than 6 characters  |  input error alert | input error alert |
+    | username with more than 12 characters | not possible to input more than 12 | not possible to input more than 12 |
+    | not authorised character - "!" in username | input error alert | input error alert |
+    | username with allowed characters and with allowed length ("testing") &: |     |       |
+    |  - email with 8 characters and: |     |       |
+    |       -- missing @ in email address | input error alert | input error alert |
+    |       -- digit after @ | input error alert | input error alert |
+    |       -- 1 character after . | input error alert | input error alert |
+    |       -- 5 random characters except "@" + "@" + 3 "a-z" characters + "." + 3 "a-z" characters | 
+
+
 
 ## 6. Bugs Known
 
   ### 6.1 Bugs resolved. 
   * Once on collapible navbar menu the menu would not expand - console showing error. This was corrected by correcting the jquery script in the base.html.  
+  * Once testing register.html by input new details in form the error "AttributeError: 'NoneType' object has no attribute 'lower'" would repeatedly appear. Checked mongodb key on heroku, mongodb and eny.py document but all ok. tried changing collection names but no different until realised that there was no "name" property in username input in register.html. Once corrected this the form worked.
   * 
 
 
 ## 7. Deployment
 
 ## 8. Credits
+  * RegEx code to validate email address obtained from https://stackoverflow.com/questions/17464404/html5-pattern-attribute-not-matching-for-emailusergmail-com
