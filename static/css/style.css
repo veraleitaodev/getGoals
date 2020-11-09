@@ -54,7 +54,8 @@ span.white-text {
     font-weight: bold;
 }
 /*-- Register page --*/
-.register-container {
+.register-container,
+.login-container {
     margin-top: 50px;
 }
 button.btn.submit-button {
