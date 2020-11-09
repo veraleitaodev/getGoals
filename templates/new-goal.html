@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block content %}
+<h5 class="center-align">Set a New Goal</h5>
+<div class="container main-container">
+  <!--image upload section-->
+  <div class="row">
+    <div class="col s12 m8 offset-m2">
+    <p>upload an image that relates to your goal</p>
+      <!--upload image file section from https://codepen.io/opznhaarlems/pen/mKymJy and adapted to this project-->
+      <div class="container my-4">
+        <form action="">
+          <label class="image-file-upload">
+            <input
+              type="file"
+              data-target="#image"
+              data-preview="#image-preview"
+              data-max-width="300"
+              data-max-height="200"
+              data-mime="image/jpeg"
+            />
+            <input type="hidden" name="image" id="image" />
+            <div id="image-preview" class="image-file-upload-preview">
+              <span class="mdi mdi-image mdi-48px"></span>
+            </div>
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
