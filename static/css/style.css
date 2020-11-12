@@ -20,8 +20,8 @@
 }
 
 body {
-    font-family: "Noto Sans", sans-serif;
-    background-color: var(--color-9);
+  font-family: "Noto Sans", sans-serif;
+  background-color: var(--color-9);
 }
 
 h5.center-align {
@@ -37,7 +37,7 @@ h5.center-align {
 /*--Navigation--*/
 
 .nav-wrapper {
-  background-color: var(--color-4);
+  background-color: var(--color-5);
   box-shadow: 0px 0px 10px 5px var(--color-10);
   min-height: 60px;
 }
@@ -45,7 +45,7 @@ h5.center-align {
 a.brand-logo {
   font-family: "Gruppo", sans-serif;
   font-size: 24px;
-  color: var(--color-8);
+  color: var(--color-3);
   font-weight: 700;
   text-shadow: 2px 2px 2px var(--color-7);
 }
@@ -60,6 +60,9 @@ li i.material-icons.logo-icon {
 i.material-icons.menu-icon {
   color: var(--color-3);
   text-shadow: 2px 2px 2px var(--color-7);
+}
+nav li a {
+    color: var(--color-3);
 }
 /*-- Section for flashed messages --*/
 div.card-panel.flashed_messages {
@@ -88,7 +91,6 @@ div.card-panel.new-goal-panel {
   box-shadow: 0px 0px 10px 5px var(--color-10);
 }
 
-
 i.material-icons.new-form-icon.prefix {
   color: var(--color-3);
   text-shadow: 2px 2px 2px var(--color-7);
@@ -100,3 +102,29 @@ button.btn.new-submit-button {
   font-weight: bold;
 }
 
+/*-- footer --*/
+.footer-copyright {
+  background-color: var(--color-4);
+  color: var(--color-8);
+}
+
+.page-footer {
+  background-color: var(--color-5);
+  color: var(--color-8);
+}
+
+/* Small devices (landscape phones, more than 576px)*/
+@media (min-width: 370px) {
+  html {
+    font-size: 1.2rem;
+  }
+  a.brand-logo {
+  font-size: 32px;
+}
+}
+/* Medium devices (tablets, more than 768px)*/
+@media (min-width: 768px) {
+  html {
+    font-size: 1.3rem;
+  }
+}

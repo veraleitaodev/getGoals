@@ -18,6 +18,7 @@
     />
     {% block styles %} {%endblock %}
     <title>SetGoals</title>
+    <link rel="shortcut icon" href="/assets/images/faviconSetGoals.jpg" type="image">
   </head>
   <body>
     
@@ -31,7 +32,7 @@
                 ><i class="material-icons logo-icon prefix">radio_button_checked</i>SetGoals</a
               >
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-                ><i class="material-icons menu-icon">more_vert</i></a
+                ><i class="material-icons menu-icon">menu</i></a
               >
               <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('set_goals') }}">Home</a></li>
@@ -78,9 +79,31 @@
       <main>
       {% block content %} {% endblock %}
       </main>
-      <footer>
-      
-      </footer>
+      <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="{{ url_for('set_goals') }}">home<i class="material-icons new-form-icon prefix">home</i></a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2020 Vera Leitao
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
