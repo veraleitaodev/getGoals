@@ -110,6 +110,11 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/new_goal")
+def new_goal():
+    return render_template("new-goal.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
