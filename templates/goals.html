@@ -1,13 +1,40 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block content %}
 
-
-{% block content %}
- <div class="card-panel new-goal-panel">   
-    {% for goal in goals %}
-        {{ goal.goal_title }}<br>
-        {{ goal.category_name }}<br>
-        {{ goal.goal_description }}<br>
-        {{ goal.due_date }}<br>
-    {% endfor %}
-</div>
+<ul class="collapsible">
+  {% for goal in goals %}
+  <li>
+    <div class="collapsible-header">
+      <div class="container">
+        <div class="row">
+          <div class="col s1 ">
+            <i class="material-icons logo-icon">radio_button_checked</i>
+          </div>
+          <div class="col s9">
+            <div class="row">
+              <div class="col m6">
+                <h5 class="center-align">
+                 {{ goal.goal_title }}
+                </h5>
+              </div>
+              <div class="col m6 center-align">
+                <strong>{{ goal.category_name }}</strong>: {{ goal.due_date }}
+              </div>
+            </div>
+          </div>
+          <div class="col s1 ">
+            <i class="fas fa-pencil-alt tooltipped" data-position="bottom" data-tooltip="edit"></i>
+          </div>
+          <div class="col s1 ">
+            <i class="fas fa-trash-alt tooltipped" data-position="bottom" data-tooltip="delete"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collapsible-body">
+      <strong> {{ goal.goal_title }}</strong>
+      <p>{{ goal.goal_description }}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
 {% endblock %}

@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/set_goals")
 def set_goals():
-    goals = mongo.db.goals.find()
+    goals = list(mongo.db.goals.find())
     return render_template("goals.html", goals=goals)
 
 

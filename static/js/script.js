@@ -2,9 +2,7 @@
 
 $(document).ready(function(){
     $(".sidenav").sidenav();
-});
-
-
-$(document).ready(function(){
     $('select').formSelect();
+    $('.collapsible').collapsible();
+    $('.tooltipped').tooltip();
   });

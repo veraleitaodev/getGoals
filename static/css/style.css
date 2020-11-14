@@ -138,6 +138,29 @@ a.footer-links i:hover {
     color: var(--color-4);
 }
 
+/*-- home page --*/
+i.material-icons.logo-icon {
+    display: flex;
+    align-items: center;
+    color: var(--color-5);
+}
+
+.list-inline {
+  padding-left: 0;
+  margin-left: -2px;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+i.fas.tooltipped {
+    font-size: 14px;
+    color: var(--color-10);
+}
+
 /* Small devices (landscape phones, more than 576px)*/
 @media (min-width: 370px) {
   a.brand-logo {
