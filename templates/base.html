@@ -16,96 +16,105 @@
       href="{{ url_for('static', filename='css/style.css')}}"
       type="text/css"
     />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/favicon.ico"
+      type="image/jpg"
+    />
     {% block styles %} {%endblock %}
     <title>SetGoals</title>
-    <link rel="shortcut icon" href="/assets/images/faviconSetGoals.jpg" type="image">
   </head>
   <body>
-    
-      <header>
-
-          <!--Desktop Navbar-->
-          <nav>
-            <div class="nav-wrapper">
-            <div class="container">
-              <a href="{{ url_for('set_goals') }}" class="brand-logo"
-                ><i class="material-icons logo-icon prefix">radio_button_checked</i>SetGoals</a
-              >
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"
-                ><i class="material-icons menu-icon">menu</i></a
-              >
-              <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('set_goals') }}">Home</a></li>
-                <li><a href="{{ url_for('new_goal') }}">New Goal</a></li>
-                <li><a href="{{ url_for('login') }}">Login</a></li>
-                <li><a href="#">Logout</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
-              </ul>
-            </div>
-            </div>
-          </nav>
-        
-        <!--Mobile sidenav-->
-        <ul class="sidenav" id="mobile-demo">
-          <li><a href="#!" class="brand-logo"
-                ><i class="material-icons logo-icon prefix">radio_button_checked</i>SetGoals</a
-              ></li>
-          <li><a href="{{ url_for('set_goals') }}">Home</a></li>
-          <li><a href="{{ url_for('new_goal') }}">New Goal</a></li>
-          <li><a href="{{ url_for('login') }}">Login</a></li>
-          <li><a href="#">Logout</a></li>
-          <li><a href="{{ url_for('register') }}">Register</a></li>
-        </ul>
-      </header>
-      <section>
-      <!-- messages from Flash -->
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-                <div class="container">
-                    <div class="row">
-                        <div class="col s12 m8 offset-m2">
-                        <div class="card-panel flashed_messages center-align">
-                            <span class="white-text">{{ message }}
-                            </span>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        {% endif %}
-      {% endwith %}
-      </section>
-      <main>
-      {% block content %} {% endblock %}
-      </main>
-      <footer class="page-footer">
+    <header>
+      <!--Desktop Navbar-->
+      <nav>
+        <div class="nav-wrapper">
           <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="{{ url_for('set_goals') }}">home<i class="material-icons new-form-icon prefix">home</i></a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
+            <a href="{{ url_for('set_goals') }}" class="brand-logo"
+              ><i class="material-icons logo-icon prefix"
+                >radio_button_checked</i
+              >SetGoals</a
+            >
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+              ><i class="material-icons menu-icon">menu</i></a
+            >
+            <ul class="right hide-on-med-and-down">
+              <li><a href="{{ url_for('set_goals') }}">Home</a></li>
+              <li><a href="#">New Goal</a></li>
+              <li><a href="{{ url_for('login') }}">Login</a></li>
+              <li><a href="#">Logout</a></li>
+              <li><a href="{{ url_for('register') }}">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!--Mobile sidenav-->
+      <ul class="sidenav" id="mobile-demo">
+        <li>
+          <a href="#!" class="brand-logo"
+            ><i class="material-icons logo-icon prefix">radio_button_checked</i
+            >SetGoals</a
+          >
+        </li>
+        <li><a href="{{ url_for('set_goals') }}">Home</a></li>
+        <li>
+          <a href="{{ url_for('set_goals', username=session['user']) }}"
+            >profile</a
+          >
+        </li>
+        <li><a href="#">New Goal</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        <li><a href="#">Logout</a></li>
+        <li><a href="{{ url_for('register') }}">Register</a></li>
+      </ul>
+    </header>
+    <section>
+      <!-- messages from Flash -->
+      {% with messages = get_flashed_messages() %} {% if messages %} {% for
+      message in messages %}
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m8 offset-m2">
+            <div class="card-panel flashed_messages center-align">
+              <span class="white-text">{{ message }} </span>
             </div>
           </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2020 Vera Leitao
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
+        </div>
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+    </section>
+    <main>{% block content %} {% endblock %}</main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col s2 offset-s3">
+            <a class="footer-links" href="{{ url_for('set_goals') }}"
+              ><i class="fas fa-home"></i
+            ></a>
           </div>
-        </footer>
+          <div class="col s2">
+            <a class="footer-links" href="https://www.instagram.com/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+          <div class="col s2">
+            <a class="footer-links" href="https://www.pinterest.com/"
+              ><i class="fab fa-pinterest"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">© 2020 Vera Leitao</div>
+      </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fc05d49b22.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %} {% endblock %}
   </body>
