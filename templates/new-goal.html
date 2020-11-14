@@ -10,29 +10,34 @@
       <div class="card-panel new-goal-panel">
         <!-- time frame -->
         <div class="row">
-          <div class="input-field col s8">
+          <div class="input-field col s12">
+            <i class="material-icons new-form-icon prefix">comment</i>
             <select
               name="category_name
 "
               id="category_name
 "
+              class="validate"
               required
             >
               <option value="" disabled selected>Choose your option</option>
-              <option value="1">Long term</option>
-              <option value="2">Medium term</option>
-              <option value="3">Short term</option>
+              {% for category in categories %}
+              <option value="{{ category.category_name}}">
+                {{ category.category_name}}
+              </option>
+              {% endfor %}
             </select>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s8">
+          <div class="input-field col s12">
             <i class="material-icons new-form-icon prefix">title</i>
             <input
               id="goal_title"
               name="goal_title"
               type="text"
-              data-length="50" required
+              data-length="50"
+              required
             />
             <label for="goal_title">Title</label>
           </div>
@@ -44,17 +49,22 @@
               id="goal_description"
               name="goal_description"
               class="materialize-textarea"
-              data-length="200" required
+              data-length="200"
+              required
             ></textarea>
-            <label for="goal_description"
-              >Describe your new goal</label
-            >
+            <label for="goal_description">Describe your new goal</label>
           </div>
         </div>
         <div class="row">
-          <div class="input-field col s8">
+          <div class="input-field col s12">
             <i class="material-icons new-form-icon prefix">today</i>
-            <input id="due_date" name="due_date" type="text" class="datepicker validate" required/>
+            <input
+              id="due_date"
+              name="due_date"
+              type="text"
+              class="datepicker validate"
+              required
+            />
             <label for="due_date">due date</label>
           </div>
         </div>

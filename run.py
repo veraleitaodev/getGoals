@@ -112,7 +112,9 @@ def logout():
 
 @app.route("/new_goal")
 def new_goal():
-    return render_template("new-goal.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+
+    return render_template("new-goal.html", categories=categories)
 
 
 if __name__ == "__main__":
