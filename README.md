@@ -115,6 +115,9 @@ In order to test input field new requirements:
   * Once testing register.html by input new details in form the error "AttributeError: 'NoneType' object has no attribute 'lower'" would repeatedly appear. Checked mongodb key on heroku, mongodb and eny.py document but all ok. tried changing collection names but no different until realised that there was no "name" property in username input in register.html. Once corrected this the form worked.
   * 
 
+### 6.1 Bugs unresolved
+* favicon
+* 
 
 ## 7. Deployment
 

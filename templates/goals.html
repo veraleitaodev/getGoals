@@ -1,11 +1,13 @@
 {% extends "base.html" %}
+
+
 {% block content %}
-    
+ <div class="card-panel new-goal-panel">   
     {% for goal in goals %}
         {{ goal.goal_title }}<br>
         {{ goal.category_name }}<br>
         {{ goal.goal_description }}<br>
         {{ goal.due_date }}<br>
     {% endfor %}
-
+</div>
 {% endblock %}
