@@ -1,3 +1,4 @@
+''' contains the routes of the application'''
 import os
 from flask import (
     Flask, flash, render_template,
@@ -37,27 +38,26 @@ def register():
             flash("Username already exists")
             return redirect(url_for("register"))
 
-        if request.method == "POST":
             # check if email already exists in db
-            existing_user = mongo.db.users.find_one(
-                {"email": request.form.get("email").lower()})
+        existing_user = mongo.db.users.find_one(
+            {"email": request.form.get("email").lower()})
 
-            if existing_user:
-                flash("Email already exists")
-                return redirect(url_for("register"))
+        if existing_user:
+            flash("Email already exists")
+            return redirect(url_for("register"))
 
-            register = {
-                "username": request.form.get("username").lower(),
-                "email": request.form.get("email").lower(),
-                "password": generate_password_hash(
-                                request.form.get("password"))
-            }
-            mongo.db.users.insert_one(register)
+        new_user = {
+            "username": request.form.get("username").lower(),
+            "email": request.form.get("email").lower(),
+            "password": generate_password_hash(
+                            request.form.get("password"))
+        }
+        mongo.db.users.insert_one(new_user)
 
-            # put the new user into "session" cookie
-            session["user"] = request.form.get("username").lower()
-            flash("You are now registered!")
-            return redirect(url_for("set_goals", username=session["user"]))
+        # put the new user into "session" cookie
+        session["user"] = request.form.get("username").lower()
+        flash("You are now registered!")
+        return redirect(url_for("set_goals", username=session["user"]))
 
     return render_template("register.html")
 
@@ -76,7 +76,7 @@ def login():
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome {}".format(request.form.get("username")))
                 return redirect(url_for("set_goals", username=session["user"]))
-  
+
             else:
                 # invalid password match
                 flash("incorrect username and/or password")
@@ -110,11 +110,21 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/new_goal")
+@app.route("/new_goal", methods=["GET", "POST"])
 def new_goal():
-    categories = mongo.db.categories.find().sort("category_name", 1)
+    if request.method == "POST":
+        add_goal = {
+            "goal_title": request.form.get("goal_title"),
+            "goal_description": request.form.get("goal_description"),
+            "due_date": request.form.get("due_date"),
+            "author": session["user"]
+            }
 
-    return render_template("new-goal.html", categories=categories)
+        mongo.db.goals.insert_one(add_goal)
+        flash("Goal Added")
+        return redirect(url_for("set_goals"))
+
+    return render_template("new-goal.html")
 
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     $('.tooltipped').tooltip();
     $('.datepicker').datepicker({
-        format: "dd mm, yyyy",
+        format: "dd/mm/yyyy",
         showClearBtn: true,
         i18n: {
             done: "Select"
