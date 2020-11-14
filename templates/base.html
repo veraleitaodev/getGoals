@@ -39,11 +39,14 @@
               ><i class="material-icons menu-icon">menu</i></a
             >
             <ul class="right hide-on-med-and-down">
-              <li><a href="{{ url_for('set_goals') }}">Home</a></li>
-              <li><a href="#">New Goal</a></li>
-              <li><a href="{{ url_for('login') }}">Login</a></li>
-              <li><a href="{{ url_for('logout') }}">Logout</a></li>
-              <li><a href="{{ url_for('register') }}">Register</a></li>
+              {% if session.user %}
+                <li><a href="{{ url_for('set_goals') }}">Home</a></li>
+                <li><a href="#">New Goal</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+              {% else %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+              {% endif %}
             </ul>
           </div>
         </div>
@@ -57,16 +60,19 @@
             >SetGoals</a
           >
         </li>
-        <li><a href="{{ url_for('set_goals') }}">Home</a></li>
-        <li>
-          <a href="{{ url_for('set_goals', username=session['user']) }}"
-            >profile</a
-          >
-        </li>
-        <li><a href="#">New Goal</a></li>
-        <li><a href="{{ url_for('login') }}">Login</a></li>
-        <li><a href="{{ url_for('logout') }}">Logout</a></li>
-        <li><a href="{{ url_for('register') }}">Register</a></li>
+            {% if session.user %}
+            <li><a href="{{ url_for('set_goals') }}">Home</a></li>
+            <li>
+            <a href="{{ url_for('set_goals', username=session['user']) }}"
+                >profile</a
+            >
+            </li>
+            <li><a href="#">New Goal</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        {% else %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+        {% endif %}
       </ul>
     </header>
     <section>
