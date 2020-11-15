@@ -165,6 +165,13 @@ i.fas.tooltipped {
   font-size: 14px;
   color: var(--color-10);
 }
+/*-- edit page --*/
+a.btn.cancel-submit-button {
+    background-color: var(--color-1);
+}
+button.btn.edit-submit-button {
+    background-color: var(--color-5);
+}
 
 /* Small devices (landscape phones, more than 576px)*/
 @media (min-width: 370px) {
