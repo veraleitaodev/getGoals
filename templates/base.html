@@ -63,9 +63,6 @@
             {% if session.user %}
             <li><a href="{{ url_for('set_goals') }}">Home</a></li>
             <li>
-            <a href="{{ url_for('set_goals', username=session['user']) }}"
-                >profile</a
-            >
             </li>
             <li><a href="{{ url_for('new_goal') }}">New Goal</a></li>
             <li><a href="{{ url_for('logout') }}">Logout</a></li>
