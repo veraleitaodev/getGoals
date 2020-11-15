@@ -129,8 +129,18 @@ def new_goal():
 
 @app.route("/edit_goal/<goal_id>", methods=["GET", "POST"])
 def edit_goal(goal_id):
-    goal = mongo.db.goals.find_one({"_id": ObjectId(goal_id)})
+    if request.method == "POST":
+        edit_goal = {
+            "goal_title": request.form.get("goal_title"),
+            "goal_description": request.form.get("goal_description"),
+            "due_date": request.form.get("due_date"),
+            "author": session["user"]
+            }
 
+        mongo.db.goals.update({"_id": ObjectId(goal_id)}, edit_goal)
+        flash("Goal Updated")
+
+    goal = mongo.db.goals.find_one({"_id": ObjectId(goal_id)})
     return render_template("edit-goal.html", goal=goal)
 
 
