@@ -161,7 +161,7 @@ i.material-icons.logo-icon {
   padding-left: 2px;
 }
 
-i.fas.tooltipped {
+i.tooltipped {
   font-size: 14px;
   color: var(--color-10);
 }
@@ -188,7 +188,7 @@ button.btn.edit-submit-button {
   .sidenav li a.brand-logo i {
     font-size: 32px;
   }
-  i.fas.tooltipped {
+  i.tooltipped {
   font-size: 18px;
 }
 }

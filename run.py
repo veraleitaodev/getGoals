@@ -151,6 +151,13 @@ def delete_goal(goal_id):
     return redirect(url_for("set_goals"))
 
 
+@app.route("/completed_goal?<goal_id>")
+def completed_goal(goal_id):
+    mongo.db.goals.remove({"_id": ObjectId(goal_id)})
+    flash("Congratulations! You completed your Goal")
+    return redirect(url_for("set_goals"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
