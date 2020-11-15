@@ -139,6 +139,7 @@ def edit_goal(goal_id):
 
         mongo.db.goals.update({"_id": ObjectId(goal_id)}, edit_goal)
         flash("Goal Updated")
+        return redirect(url_for("set_goals"))
 
     goal = mongo.db.goals.find_one({"_id": ObjectId(goal_id)})
     return render_template("edit-goal.html", goal=goal)

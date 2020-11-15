@@ -32,7 +32,9 @@
               class="materialize-textarea"
               data-length="200"
               required
-            >{{ goal.goal_description }}</textarea>
+            >
+{{ goal.goal_description }}</textarea
+            >
             <label for="goal_description">Describe your new goal</label>
           </div>
         </div>
@@ -50,13 +52,18 @@
           </div>
         </div>
         <div class="row">
-          <div class="col s12 center-align">
-           <!--Cancel button-->
-          <a href="{{ url_for('set_goals')}}" class="btn cancel-submit-button">
+          <!--Cancel button-->
+          <div class="col s6 right-align">
+            <a
+              href="{{ url_for('set_goals')}}"
+              class="btn cancel-submit-button"
+            >
               Cancel
               <i class="material-icons right">clear</i>
             </a>
-            <!--Edit button-->
+          </div>
+          <!--Edit button-->
+          <div class="col s6 left-align">
             <button class="btn edit-submit-button" type="submit">
               Edit Goal
               <i class="material-icons right">check</i>

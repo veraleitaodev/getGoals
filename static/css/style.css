@@ -164,6 +164,7 @@ i.material-icons.logo-icon {
 i.tooltipped {
   font-size: 14px;
   color: var(--color-10);
+  padding: 10px;
 }
 /*-- edit page --*/
 a.btn.cancel-submit-button {
