@@ -127,6 +127,13 @@ def new_goal():
     return render_template("new-goal.html")
 
 
+@app.route("/edit_goal/<goal_id>", methods=["GET", "POST"])
+def edit_goal(goal_id):
+    goal = mongo.db.goals.find_one({"_id": ObjectId(goal_id)})
+
+    return render_template("edit-goal.html", goal=goal)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
