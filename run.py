@@ -144,6 +144,13 @@ def edit_goal(goal_id):
     return render_template("edit-goal.html", goal=goal)
 
 
+@app.route("/delete_goal/<goal_id>")
+def delete_goal(goal_id):
+    mongo.db.goals.remove({"_id": ObjectId(goal_id)})
+    flash("Goal Deleted")
+    return redirect(url_for("set_goals"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

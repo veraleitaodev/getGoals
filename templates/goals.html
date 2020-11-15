@@ -27,7 +27,7 @@
            <a href="{{ url_for('edit_goal', goal_id=goal._id) }}"> <i class="fas fa-pencil-alt tooltipped" data-position="bottom" data-tooltip="edit"></i></a>
           </div>
           <div class="col s1 ">
-            <a href=""><i class="fas fa-trash-alt tooltipped" data-position="bottom" data-tooltip="delete"></i></a>
+            <a href="{{ url_for('delete_goal', goal_id=goal._id) }}"><i class="fas fa-trash-alt tooltipped" data-position="bottom" data-tooltip="delete"></i></a>
           </div>
         </div>
       </div>
