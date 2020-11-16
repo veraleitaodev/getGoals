@@ -151,6 +151,7 @@ h4.home-page {
 
 .drawing {
     overflow: hidden;
+    margin-top: 25px;
 }
 
 .home-text {
@@ -190,6 +191,11 @@ i.tooltipped {
   color: var(--color-10);
   padding: 10px;
 }
+
+.modal-close.btn {
+  background-color: var(--color-4);
+}
+
 /*-- edit page --*/
 a.btn.cancel-submit-button {
     background-color: var(--color-1);
