@@ -7,13 +7,18 @@
 		<div class="row container">
 			<div class="col s12 m8">
 				<h4 class="header home-page">Plan to Live Your Life</h4>
-				<h6 class="home-text">
+                <p class="home-page grey-text">Set <a href="{{ url_for('how_to')}}" class="btn-floating pulse">SMART</a> Goals</p>
+				 
+                 {% if not session.user %}
+                <h6 class="home-text">
                 Already have an account?
                 </h6>
 				<a href="{{ url_for('login')}}" class="btn submit-button waves-effect waves-light">
 					Log In
 					<i class="material-icons right">send</i>
 				</a>
+                {% endif %}
+
 			</div>
 			<div class="col s12 m4 drawing">
 				<img src="{{ url_for('static', filename='images/plans-home-small.png')}}">

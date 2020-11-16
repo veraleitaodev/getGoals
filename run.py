@@ -167,6 +167,11 @@ def completed_goal(goal_id):
     return redirect(url_for("set_goals"))
 
 
+@app.route('/how_to')
+def how_to():
+    return render_template('how-to.html')
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

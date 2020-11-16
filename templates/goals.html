@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block content %}
-
+<h5 class="center-align">My Goals</h5>
 <div class="row">
   {% for goal in goals %} {% if session.user|lower != goal.author|lower %} {%
   endif %} {% if session.user|lower == goal.author|lower %}
-  <div class="col s12 m6">
+  <div class="col s12 m6 l4">
     <!--Materialize small card with image -->
     <div class="card small">
       <div class="card-image waves-effect waves-block waves-light">
@@ -42,12 +42,12 @@
         <span class="card-title center"
           >{{ goal.goal_title }}<i class="material-icons right">close</i></span
         >
-        <div class="row">
-          <div class="col s8 reveal">
+            <hr/>
             <p><i class="material-icons">subject</i> {{ goal.goal_description }} </p>
             <p><i class="material-icons">timelapse</i> {{ goal.due_date }} </p>
             <p><em>{{ goals.author }}</em></p>
-
+            <div class="row">
+          <div class="col s10 reveal">
             <!--Codepen progress bar obtained from https://codepen.io/pankajparashar/pen/qDKGo and adapted to this project -->
             <p style="width: 80%" data-value="80"><i class="material-icons">show_chart</i>My progress</p>
             <progress max="100" value="80" class="html5 my-progress-bar">
@@ -56,9 +56,9 @@
               </div>
             </progress>
           </div>
-          <div class="col s4 left">
-            <img src="static/images/planner-team.png" />
-          </div>
+          <!--div class="col s4">
+            <img src="static/images/planner-mode-2.png" />
+          </div-->
         </div>
       </div>
     </div>

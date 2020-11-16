@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% block content %}
+<div class="row">
+  <div class="col s12 m8 offset-m2">
+    <h5>What Are SMART Goals?</h5>
+  </div>
+</div>
+<div class="row how-to">
+  <div class="col s12">
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">gps_fixed</i>S pecific
+        </div>
+        <div class="collapsible-body">
+          <span>What will be accomplished? What actions will you take?</span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">insights</i>M easurable
+        </div>
+        <div class="collapsible-body">
+          <span>What data will measure the goal? (How much? How well?</span>
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">grade</i>A chievable
+        </div>
+        <div class="collapsible-body">
+          <span
+            >Is the goal doable? Do you have the necessary skills and
+            resources?</span
+          >
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">toll</i>R elevant
+        </div>
+        <div class="collapsible-body how-to">
+          <span
+            >How does the goal align with broader goals? Why is the result
+            important?</span
+          >
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header">
+          <i class="material-icons">hourglass_top</i>T ime-Bound
+        </div>
+        <div class="collapsible-body">
+          <span
+            >How does the goal align with broader goals? Why is the result
+            important?</span
+          >
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row image-how-to">
+  <div class="col"></div>
+</div>
+{% if not session.user %}
+<div class="row">
+  <div class="col s4 offset-s4">
+    <h6 class="home-text">Already have an account?</h6>
+    <a
+      href="{{ url_for('login')}}"
+      class="btn submit-button waves-effect waves-light"
+    >
+      Log In
+      <i class="material-icons right">send</i>
+    </a>
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}
