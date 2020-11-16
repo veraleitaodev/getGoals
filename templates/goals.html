@@ -1,72 +1,88 @@
 {% extends "base.html" %} {% block content %}
 
-
 <div class="row">
-	{% for goal in goals %}
-	{% if session.user|lower != goal.author|lower %}
-
-	{% endif %}
-	{% if session.user|lower == goal.author|lower %}
-	<div class="col s12 m6">
-		<!--Materialize small card with image -->
-		<div class="card small">
-			<div class="card-image waves-effect waves-block waves-light">
-				<img class="activator" src="static/images/goals-image-4.jpg" />
+  {% for goal in goals %} {% if session.user|lower != goal.author|lower %} {%
+  endif %} {% if session.user|lower == goal.author|lower %}
+  <div class="col s12 m6">
+    <!--Materialize small card with image -->
+    <div class="card small">
+      <div class="card-image waves-effect waves-block waves-light">
+        <img class="activator" src="static/images/goals-image-4.jpg" />
+      </div>
+      <div class="card-content">
+        <div class="card-title activator grey-text text-darken-4">
+          {{ goal.goal_title }}<i class="material-icons right">more_vert</i>
         </div>
-				<div class="card-content">
-					<div class="card-title activator grey-text text-darken-4">{{ goal.goal_title }}<i class="material-icons right"
-                >more_vert</i></div>
-					<div class="right-align">
-						<span
-            >
+        <div class="right-align">
+          <span>
             <!--Edit Icon to direct to edit goal page-->
-            <a
-                href="{{ url_for('edit_goal', goal_id=goal._id) }}"
-                ><i
+            <a href="{{ url_for('edit_goal', goal_id=goal._id) }}"
+              ><i
                 class="fas fa-pencil-alt tooltipped"
                 data-position="bottom"
                 data-tooltip="edit"
-                ></i></a></span><span>
+              ></i></a></span
+          ><span>
             <!--Delete icon to launch confirmation modal to verify if a user wants to delete goal-->
-            <a class="delete-icon modal-trigger" href="#modal1" data-target="modal1"
-                ><i
+            <a
+              class="delete-icon modal-trigger"
+              href="#modal1"
+              data-target="modal1"
+              ><i
                 class="fas fa-trash-alt tooltipped"
                 data-position="bottom"
                 data-tooltip="delete"
-                ></i></a
-            ></span>
-					</div>
-				</div>
-				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4"
-                >{{ goal.goal_title }}<i class="material-icons right">close</i></span>
-					<strong> {{ goal.goal_title }}</strong>
-					<p>{{ goal.goal_description }}</p>
-					<p>{{ goal.due_date }}</p>
-					<p><em>{{ goals.author }}</em></p>
-					<!--Codepen progress bar obtained from https://codepen.io/pankajparashar/pen/qDKGo and adapted to this project -->
-					<p style="width:80%" data-value="80">My progress</p>
-					<progress max="100" value="80" class="html5 my-progress-bar">
-						
-						<div class="progress-bar">
-							<span style="width: 80%">80%</span>
-						</div>
-					</progress>
-				</div>
-			</div>
-		</div>
-		<!-- Modal Structure -->
-		<div id="modal1" class="modal">
-			<div class="modal-content">
-				<p>Are you sure you want to delete this Goal?</p>
-			</div>
-			<div class="modal-footer">
-				<a href="{{ url_for('set_goals')}}" class="modal-close waves-effect waves-light btn">Cancel</a>
-				<a href="{{ url_for('delete_goal', goal_id=goal._id) }}"
-					class="modal-close waves-effect waves-green btn-flat">Yes, Delete it!</a>
-			</div>
-		</div>
-		{% endif %} {% endfor %}
-	</div>
+              ></i></a
+          ></span>
+        </div>
+      </div>
 
-	{% endblock %}
+      <!--Materialize card reveal - Goal description when card clicked-->
+      <div class="card-reveal image-reveal">
+        <span class="card-title center"
+          >{{ goal.goal_title }}<i class="material-icons right">close</i></span
+        >
+        <div class="row">
+          <div class="col s8 reveal">
+            <p><i class="material-icons">subject</i> {{ goal.goal_description }} </p>
+            <p><i class="material-icons">timelapse</i> {{ goal.due_date }} </p>
+            <p><em>{{ goals.author }}</em></p>
+
+            <!--Codepen progress bar obtained from https://codepen.io/pankajparashar/pen/qDKGo and adapted to this project -->
+            <p style="width: 80%" data-value="80"><i class="material-icons">show_chart</i>My progress</p>
+            <progress max="100" value="80" class="html5 my-progress-bar">
+              <div class="progress-bar">
+                <span style="width: 80%">80%</span>
+              </div>
+            </progress>
+          </div>
+          <div class="col s4 left">
+            <img src="static/images/planner-team.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to delete this Goal?</p>
+    </div>
+    <div class="modal-footer">
+      <a
+        href="{{ url_for('set_goals')}}"
+        class="modal-close waves-effect waves-light btn"
+        >Cancel</a
+      >
+      <a
+        href="{{ url_for('delete_goal', goal_id=goal._id) }}"
+        class="modal-close waves-effect waves-green btn-flat"
+        >Yes, Delete it!</a
+      >
+    </div>
+  </div>
+  {% endif %} {% endfor %}
+</div>
+
+{% endblock %}

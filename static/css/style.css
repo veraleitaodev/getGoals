@@ -199,7 +199,26 @@ i.tooltipped {
 .progress {
   margin: 10px;
   width: 700px;
+  color: var(--color-2);
 }/*---Codepen progress bar obtained from https://codepen.io/gustitammam/pen/RRXGdj and adapted to this project --*/
+
+.image-reveal span,
+.image-reveal p {  
+  margin-bottom: 18px;
+}
+
+.image-reveal span {
+    color: var(--color-2);
+    font-weight: bold;
+}
+
+.image-reveal .material-icons {
+    color: var(--color-2);
+}
+
+.image-reveal img {
+    margin-top: 120px;
+}
 
 /*-- edit page --*/
 a.btn.cancel-submit-button {
