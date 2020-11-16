@@ -20,6 +20,14 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route('/home')
+def home():
+    """
+    On page load, home page is displayed.
+    """
+    return render_template('index.html')
+
+
 @app.route("/set_goals")
 def set_goals():
     goals = list(mongo.db.goals.find())

@@ -98,7 +98,7 @@ span.white-text {
 }
 /*-- Register page --*/
 
-button.btn.submit-button {
+.btn.submit-button {
   background-color: var(--color-1);
 }
 i.material-icons.form-icon.prefix {
@@ -144,6 +144,30 @@ a.footer-links i:hover {
 }
 
 /*-- home page --*/
+h4.home-page {
+    color: var(--color-1);
+    line-height: 36px;
+}
+
+.drawing {
+    overflow: hidden;
+}
+
+.home-text {
+    color: var(--color-6);
+    line-height: 24px;
+    margin: 40px 0 15px;
+}
+
+.parallax-container.container-1 {
+      max-height: 400px;
+    }
+
+.parallax-container.container-2 {
+      max-height: 200px;
+    }
+
+/*-- set goals page --*/
 i.material-icons.logo-icon {
   display: flex;
   align-items: center;

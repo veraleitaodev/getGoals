@@ -2,7 +2,11 @@
 
 
 <div class="row">
-  {% for goal in goals %} {% if session.user|lower == goal.author|lower %}
+  {% for goal in goals %} 
+  {% if session.user|lower != goal.author|lower %}
+    
+  {% endif %}
+  {% if session.user|lower == goal.author|lower %}
   <div class="col s12 m6">
     <div class="card small">
         <div class="card-image waves-effect waves-block waves-light">

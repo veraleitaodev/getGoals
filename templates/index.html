@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="parallax-container container-1">
+	<div class="parallax"><img src="{{ url_for('static', filename='images/home-image-longRoad.jpg')}}"></div>
+	</div>
+	<div class="section white">
+		<div class="row container">
+			<div class="col s12 m8">
+				<h4 class="header home-page">Plan to Live Your Life</h4>
+				<h6 class="home-text">
+                Already have an account?
+                </h6>
+				<a href="{{ url_for('login')}}" class="btn submit-button waves-effect waves-light">
+					Log In
+					<i class="material-icons right">send</i>
+				</a>
+			</div>
+			<div class="col s12 m4 drawing">
+				<img src="{{ url_for('static', filename='images/plans-home-small.png')}}">
+            </div>
+			</div>
+		</div>
+		<div class="parallax-container container-2">
+			<div class="parallax"><img src="{{ url_for('static', filename='images/home-image-road.jpg')}}"></div>
+			</div>
+			{% endblock %}
