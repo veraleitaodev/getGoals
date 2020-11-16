@@ -189,12 +189,17 @@ i.material-icons.logo-icon {
 i.tooltipped {
   font-size: 14px;
   color: var(--color-10);
-  padding: 10px;
+  padding: 5px;
 }
 
 .modal-close.btn {
   background-color: var(--color-4);
 }
+
+.progress {
+  margin: 10px;
+  width: 700px;
+}/*---Codepen progress bar obtained from https://codepen.io/gustitammam/pen/RRXGdj and adapted to this project --*/
 
 /*-- edit page --*/
 a.btn.cancel-submit-button {

@@ -8,6 +8,7 @@
 	{% endif %}
 	{% if session.user|lower == goal.author|lower %}
 	<div class="col s12 m6">
+		<!--Materialize small card with image -->
 		<div class="card small">
 			<div class="card-image waves-effect waves-block waves-light">
 				<img class="activator" src="static/images/goals-image-4.jpg" />
@@ -17,29 +18,21 @@
                 >more_vert</i></div>
 					<div class="right-align">
 						<span
-            ><a
+            >
+            <!--Edit Icon to direct to edit goal page-->
+            <a
                 href="{{ url_for('edit_goal', goal_id=goal._id) }}"
                 ><i
                 class="fas fa-pencil-alt tooltipped"
                 data-position="bottom"
                 data-tooltip="edit"
                 ></i></a></span><span>
-            <!--icon to launch confirmation modal to verify if a user wants to delete goal-->
+            <!--Delete icon to launch confirmation modal to verify if a user wants to delete goal-->
             <a class="delete-icon modal-trigger" href="#modal1" data-target="modal1"
                 ><i
                 class="fas fa-trash-alt tooltipped"
                 data-position="bottom"
                 data-tooltip="delete"
-                ></i></a
-            ></span>
-						<!--icon to launch confirmation modal to verify if a user wants to delete completed goal-->
-						<span
-            ><a
-                href="{{ url_for('completed_goal', goal_id=goal._id) }}"
-                ><i
-                class="far fa-square tooltipped"
-                data-position="bottom"
-                data-tooltip="completed"
                 ></i></a
             ></span>
 					</div>
@@ -51,6 +44,14 @@
 					<p>{{ goal.goal_description }}</p>
 					<p>{{ goal.due_date }}</p>
 					<p><em>{{ goals.author }}</em></p>
+					<!--Codepen progress bar obtained from https://codepen.io/pankajparashar/pen/qDKGo and adapted to this project -->
+					<p style="width:80%" data-value="80">My progress</p>
+					<progress max="100" value="80" class="html5 my-progress-bar">
+						
+						<div class="progress-bar">
+							<span style="width: 80%">80%</span>
+						</div>
+					</progress>
 				</div>
 			</div>
 		</div>
