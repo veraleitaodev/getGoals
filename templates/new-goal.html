@@ -8,7 +8,7 @@
       action="{{ url_for('new_goal') }}"
     >
       <div class="card-panel new-goal-panel">
-        <!-- time frame -->
+        <!-- Goal title -->
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons new-form-icon prefix">title</i>
@@ -16,12 +16,86 @@
               id="goal_title"
               name="goal_title"
               type="text"
-              data-length="50"
+              data-length="20"
               required
             />
             <label for="goal_title">Title</label>
           </div>
         </div>
+        <!-- Category - dropdown menu with images from Materialize -->
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons new-form-icon prefix">topic</i>
+            <select class="icons">
+              <option value="" disabled selected>Choose a category</option>
+              <option
+                value=""
+                data-icon="static/images/family.jpg"
+                class="left"
+              >
+                Family
+              </option>
+              <option
+                value=""
+                data-icon="static/images/career.jpg"
+                class="left"
+              >
+                Career
+              </option>
+              <option
+                value=""
+                data-icon="static/images/fitness.jpg"
+                class="left"
+              >
+                Fitness
+              </option>
+              <option
+                value=""
+                data-icon="static/images/charity.jpg"
+                class="left"
+              >
+                Charity
+              </option>
+              <option
+                value=""
+                data-icon="static/images/health.jpg"
+                class="left"
+              >
+                Health
+              </option>
+              <option
+                value=""
+                data-icon="static/images/hobbies.jpg"
+                class="left"
+              >
+                Hobbies
+              </option>
+              <option
+                value=""
+                data-icon="static/images/travel.jpg"
+                class="left"
+              >
+                Travel
+              </option>
+               <option
+                value=""
+                data-icon="static/images/money.jpg"
+                class="left"
+              >
+                Money
+              </option>
+              <option
+                value=""
+                data-icon="static/images/education.jpg"
+                class="left"
+              >
+                Education
+              </option>
+            </select>
+            <label>Images in select</label>
+          </div>
+        </div>
+        <!-- textarea from Materialize to include description of Goal -->
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons new-form-icon prefix">comment</i>

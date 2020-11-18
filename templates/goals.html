@@ -39,9 +39,10 @@
 
       <!--Materialize card reveal - Goal description when card clicked-->
       <div class="card-reveal image-reveal">
+      <span><i class="card-title material-icons right">close</i></span>
+
         <span class="card-title center"
-          >{{ goal.goal_title }}<i class="material-icons right">close</i></span
-        >
+          >{{ goal.goal_title }}</span>
             <hr/>
             <p><i class="material-icons">subject</i> {{ goal.goal_description }} </p>
             <p><i class="material-icons">timelapse</i> {{ goal.due_date }} </p>

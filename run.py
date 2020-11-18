@@ -85,11 +85,6 @@ def login():
                 flash("Welcome {}".format(request.form.get("username")))
                 return redirect(url_for("set_goals", username=session["user"]))
 
-            else:
-                # invalid password match
-                flash("incorrect username and/or password")
-                return redirect(url_for("login"))
-
         else:
             # username doesn't exist
             flash("incorrect username and/or password")
@@ -138,14 +133,14 @@ def new_goal():
 @app.route("/edit_goal/<goal_id>", methods=["GET", "POST"])
 def edit_goal(goal_id):
     if request.method == "POST":
-        edit_goal = {
+        update_goal = {
             "goal_title": request.form.get("goal_title"),
             "goal_description": request.form.get("goal_description"),
             "due_date": request.form.get("due_date"),
             "author": session["user"]
             }
 
-        mongo.db.goals.update({"_id": ObjectId(goal_id)}, edit_goal)
+        mongo.db.goals.update({"_id": ObjectId(goal_id)}, update_goal)
         flash("Goal Updated")
         return redirect(url_for("set_goals"))
 

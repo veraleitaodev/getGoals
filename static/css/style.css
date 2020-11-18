@@ -181,7 +181,7 @@ a.btn-floating {
   background-repeat: no-repeat;
   background-position: right;
   overflow: hidden;
-  min-height: 100px;
+  min-height: 150px;
 }
 
 .how-to .collapsible-body {

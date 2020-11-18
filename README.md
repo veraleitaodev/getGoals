@@ -14,7 +14,7 @@
 
 ### 2.2 __Colour Scheme__: 
 Selected a trending scheme colour including lively colours, inspired by this [photo](https://www.behance.net/gallery/45528461/Selectologie) using [ adobe color ](color.adobe.com) software.  
-![alt text](assets/images/colours.jpeg "generated colour scheme") 
+![alt text](static/images/colours.jpeg "generated colour scheme") 
 
 
 ### 2.3 __User Story__:
@@ -50,25 +50,25 @@ Selected a trending scheme colour including lively colours, inspired by this [ph
 
 ### 2.5 __Wireframes__:
 
-  * [Register page in desktop and tablet view](assets/images/wireframes/register_dt.png "wireframe for register page in desktop and tablet view");
+  * [Register page in desktop and tablet view](static/images/wireframes/register_dt.png "wireframe for register page in desktop and tablet view");
 
-  * [Register page in mobile view](assets/images/wireframes/register_mobile.png "wireframe for register page in mobile view");
+  * [Register page in mobile view](static/images/wireframes/register_mobile.png "wireframe for register page in mobile view");
   
-  * [Login page in desktop and tablet view](assets/images/wireframes/login_dt.png "wireframe for login page in desktop and tablet view");
+  * [Login page in desktop and tablet view](static/images/wireframes/login_dt.png "wireframe for login page in desktop and tablet view");
   
-  * [Login page in mobile view](assets/images/wireframes/login_mobile.png "wireframe for login page in mobile view");
+  * [Login page in mobile view](static/images/wireframes/login_mobile.png "wireframe for login page in mobile view");
   
-  * [Home page in desktop and tablet view](assets/images/wireframes/home_dt.png "wireframe for Home page in desktop and tablet view");
+  * [Home page in desktop and tablet view](static/images/wireframes/home_dt.png "wireframe for Home page in desktop and tablet view");
 
-  * [Home page in mobile view](assets/images/wireframes/home_mobile.png "wireframe for Home page in mobile view");
+  * [Home page in mobile view](static/images/wireframes/home_mobile.png "wireframe for Home page in mobile view");
 
-  * [New Goal page in desktop and tablet view](assets/images/wireframes/newGoal_dt.png "wireframe for My progress page in desktop and tablet view");
+  * [New Goal page in desktop and tablet view](static/images/wireframes/newGoal_dt.png "wireframe for My progress page in desktop and tablet view");
 
-  * [New Goal page in mobile view](assets/images/wireframes/newGoal_mobile.png "wireframe for New Goal page in mobile view");
+  * [New Goal page in mobile view](static/images/wireframes/newGoal_mobile.png "wireframe for New Goal page in mobile view");
 
-  * [Goal page in desktop and tablet view](assets/images/wireframes/goalPage_dt.png "wireframe for Goal page in desktop and tablet view") 
+  * [Goal page in desktop and tablet view](static/images/wireframes/goalPage_dt.png "wireframe for Goal page in desktop and tablet view") 
 
-  * [Goal page in mobile view](assets/images/wireframes/goalPage_mobile.png "wireframe for New Goal page in mobile view");
+  * [Goal page in mobile view](static/images/wireframes/goalPage_mobile.png "wireframe for New Goal page in mobile view");
     
 
 ## 3.Technologies and Libraries
@@ -106,6 +106,7 @@ In order to test input field new requirements:
     |       -- 1 character after . | input error alert | input error alert |
     |       -- 5 random characters except "@" + "@" + 3 "a-z" characters + "." + 3 "a-z" characters | 
 
+  * use of comand pylint to identify issues with python code
 
 
 ## 6. Bugs Known
@@ -125,4 +126,3 @@ In order to test input field new requirements:
   * RegEx code to validate email address obtained from https://stackoverflow.com/questions/17464404/html5-pattern-attribute-not-matching-for-emailusergmail-com
   * upload image file section in new-goal.html - code obtained from https://codepen.io/opznhaarlems/pen/mKymJy and adapted to this Project
   * information in how-to.html obtained from https://www.ucop.edu/local-human-resources/_files/performance-appraisal/How%20to%20write%20SMART%20Goals%20v2.pdf 
-  
