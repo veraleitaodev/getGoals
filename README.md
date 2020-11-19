@@ -107,6 +107,7 @@ In order to test input field new requirements:
     |       -- 5 random characters except "@" + "@" + 3 "a-z" characters + "." + 3 "a-z" characters | 
 
   * use of comand pylint to identify issues with python code
+  * testing forms
 
 
 ## 6. Bugs Known
