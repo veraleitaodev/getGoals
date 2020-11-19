@@ -111,14 +111,15 @@ In order to test input field new requirements:
 
 ## 6. Bugs Known
 
-  ### 6.1 Bugs resolved. 
+### 6.1 Bugs resolved  
   * Once on collapible navbar menu the menu would not expand - console showing error. This was corrected by correcting the jquery script in the base.html.  
   * Once testing register.html by input new details in form the error "AttributeError: 'NoneType' object has no attribute 'lower'" would repeatedly appear. Checked mongodb key on heroku, mongodb and eny.py document but all ok. tried changing collection names but no different until realised that there was no "name" property in username input in register.html. Once corrected this the form worked.
-  * 
-
-### 6.1 Bugs unresolved
-* favicon
-* 
+  * card layout on goals.html: icons for edit and delete too small as found in lighthouse tool found in inspect developer tools in chrome browser [(screenshot of analysis)](static/images/bugs/edit-delete-bug.jpeg "lighthouse analysis regards my goals page").
+  * delete will delete the card in front instead of the card that suposed to delete. to resolve this issue added {{ loop.index }} to icon id and modal followed by tabindex="-1" to correct the bug.
+  
+### 6.2 Bugs unresolved
+  * favicon
+  * storing images in mongodb - 16Mb size restrictions - replaced by input for URL of image instead. 
 
 ## 7. Deployment
 

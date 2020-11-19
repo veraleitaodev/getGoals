@@ -118,6 +118,8 @@ def new_goal():
     if request.method == "POST":
         add_goal = {
             "goal_title": request.form.get("goal_title"),
+            "category_name": request.form.get("category_name"),
+            "goal_image": request.form.get("goal_image"),
             "goal_description": request.form.get("goal_description"),
             "due_date": request.form.get("due_date"),
             "author": session["user"]
@@ -127,7 +129,8 @@ def new_goal():
         flash("Goal Added")
         return redirect(url_for("set_goals"))
 
-    return render_template("new-goal.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("new-goal.html", categories=categories)
 
 
 @app.route("/edit_goal/<goal_id>", methods=["GET", "POST"])
@@ -135,6 +138,7 @@ def edit_goal(goal_id):
     if request.method == "POST":
         update_goal = {
             "goal_title": request.form.get("goal_title"),
+            "goal_image": request.form.get("goal_image"),
             "goal_description": request.form.get("goal_description"),
             "due_date": request.form.get("due_date"),
             "author": session["user"]
@@ -152,13 +156,6 @@ def edit_goal(goal_id):
 def delete_goal(goal_id):
     mongo.db.goals.remove({"_id": ObjectId(goal_id)})
     flash("Goal Deleted")
-    return redirect(url_for("set_goals"))
-
-
-@app.route("/completed_goal?<goal_id>")
-def completed_goal(goal_id):
-    mongo.db.goals.remove({"_id": ObjectId(goal_id)})
-    flash("Congratulations! You completed your Goal")
     return redirect(url_for("set_goals"))
 
 

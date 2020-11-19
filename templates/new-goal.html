@@ -15,8 +15,10 @@
             <input
               id="goal_title"
               name="goal_title"
+              minlength="5"
+              maxlength="30"
               type="text"
-              data-length="20"
+              class="validate"
               required
             />
             <label for="goal_title">Title</label>
@@ -26,73 +28,27 @@
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons new-form-icon prefix">topic</i>
-            <select class="icons">
+            <select
+              class="icons validate"
+              id="category_name"
+              name="category_name"
+              required
+            >
               <option value="" disabled selected>Choose a category</option>
-              <option
-                value=""
-                data-icon="static/images/family.jpg"
-                class="left"
-              >
-                Family
+              {% for category in categories %}
+              <option value="{{ category.category_name }}">
+                {{ category.category_name }}
               </option>
-              <option
-                value=""
-                data-icon="static/images/career.jpg"
-                class="left"
-              >
-                Career
-              </option>
-              <option
-                value=""
-                data-icon="static/images/fitness.jpg"
-                class="left"
-              >
-                Fitness
-              </option>
-              <option
-                value=""
-                data-icon="static/images/charity.jpg"
-                class="left"
-              >
-                Charity
-              </option>
-              <option
-                value=""
-                data-icon="static/images/health.jpg"
-                class="left"
-              >
-                Health
-              </option>
-              <option
-                value=""
-                data-icon="static/images/hobbies.jpg"
-                class="left"
-              >
-                Hobbies
-              </option>
-              <option
-                value=""
-                data-icon="static/images/travel.jpg"
-                class="left"
-              >
-                Travel
-              </option>
-               <option
-                value=""
-                data-icon="static/images/money.jpg"
-                class="left"
-              >
-                Money
-              </option>
-              <option
-                value=""
-                data-icon="static/images/education.jpg"
-                class="left"
-              >
-                Education
-              </option>
+              {% endfor %}
             </select>
-            <label>Images in select</label>
+            <label for="category_name">Goal Category</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons new-form-icon prefix">image</i>
+            <input id="goal_image" name="goal_image" type="url" required />
+            <label for="goal_image">Add Image URL</label>
           </div>
         </div>
         <!-- textarea from Materialize to include description of Goal -->
@@ -103,7 +59,8 @@
               id="goal_description"
               name="goal_description"
               class="materialize-textarea"
-              data-length="200"
+              min-length="3"
+              max-length="200"
               required
             ></textarea>
             <label for="goal_description">Describe your new goal</label>
