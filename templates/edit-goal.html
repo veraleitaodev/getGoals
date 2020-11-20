@@ -34,11 +34,15 @@
               name="category_name"
               required
             >
-              <option value="" disabled selected>Choose a category</option>
-              {% for category in categories %}
-              <option value="{{ category.category_name }}">
-                {{ category.category_name }}
-              </option>
+              <option value="" disabled>Choose a category</option>
+              {% for category in categories %} 
+                {% if category.category_name == goal.category_name %}
+                    <option value="{{ category.category_name }}" selected>
+                    {{ category.category_name }}
+                    </option>
+                {% else %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                {% endif %}
               {% endfor %}
             </select>
             <label for="category_name">Goal Category</label>
@@ -47,7 +51,7 @@
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons new-form-icon prefix">image</i>
-            <input id="goal_image" name="goal_image" type="url"/>
+            <input id="goal_image" name="goal_image"value="{{ goal.goal_image }}" type="url"/>
             <label for="goal_image">{{ goal.goal_image }}</label>
           </div>
         </div>
@@ -59,6 +63,7 @@
               id="goal_description"
               name="goal_description"
               class="materialize-textarea"
+              value="{ goal.goal_description }}"
               minlength="3"
               maxlength="80"
               required

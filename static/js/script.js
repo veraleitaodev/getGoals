@@ -14,8 +14,8 @@ $(document).ready(function(){
     });
     $(".parallax").parallax();
     $(".modal").modal();
-    // Alert box
-    $(".my-progress-bar").click(function() {
-        alert("Ops! This progress bar is not working yet.");
+    // Alert boxs
+    $(".upload-image").click(function() {
+        alert("Ops! This feature is not working yet.");
     });
   });
