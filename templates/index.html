@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="parallax-container container-1">
-	<div class="parallax"><img src="{{ url_for('static', filename='images/home-image-longRoad.jpg')}}"></div>
+	<div class="parallax"><img src="{{ url_for('static', filename='images/home-image-longRoad.jpg')}}" alt="image of a road"></div>
 	</div>
 	<div class="section white">
 		<div class="row container">
@@ -21,11 +21,11 @@
 
 			</div>
 			<div class="col s12 m4 drawing">
-				<img src="{{ url_for('static', filename='images/plans-home-small.png')}}">
+				<img src="{{ url_for('static', filename='images/plans-home-small.png')}} " alt="planning goals image">
             </div>
 			</div>
 		</div>
 		<div class="parallax-container container-2">
-			<div class="parallax"><img src="{{ url_for('static', filename='images/home-image-road.jpg')}}"></div>
+			<div class="parallax"><img src="{{ url_for('static', filename='images/home-image-road.jpg')}}" alt="Image of a road"></div>
 			</div>
 			{% endblock %}
