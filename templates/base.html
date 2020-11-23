@@ -40,7 +40,7 @@
             >
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home') }}">Home</a></li>
-                <li><a href="{{ url_for('how_to') }}">How To...</a></li>
+                <li><a href="{{ url_for('how_to') }}">SMART, how?</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('set_goals') }}">My Goals</a></li>
                     <li><a href="{{ url_for('new_goal') }}">New Goal</a></li>
@@ -63,7 +63,7 @@
           >
         </li>
         <li><a href="{{ url_for('home') }}">Home</a></li>
-        <li><a href="{{ url_for('how_to') }}">How To...</a></li>
+        <li><a href="{{ url_for('how_to') }}">SMART, how?</a></li>
         {% if session.user %}
             <li><a href="{{ url_for('set_goals') }}">My Goals</a></li>
             <li><a href="{{ url_for('new_goal') }}">New Goal</a></li>
@@ -82,7 +82,7 @@
         <div class="row">
           <div class="col s12 m8 offset-m2">
             <div class="card-panel flashed_messages center-align">
-              <span class="white-text">{{ message }} </span>
+              <h4 class="white-text">{{ message }} </h4>
             </div>
           </div>
         </div>

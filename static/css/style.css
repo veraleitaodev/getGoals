@@ -39,6 +39,35 @@ h5.center-align {
   margin-bottom: 24px;
 }
 
+.flashed_messages {
+  -webkit-animation: seconds 4.0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 4s;
+  animation: seconds 4.0s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 4s;
+  position: relative;
+}
+@-webkit-keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -9999px; 
+  }
+}
+@keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -9999px; 
+  }
+} /* code obtained from https://stackoverflow.com/questions/26393539/css-solution-to-hide-div-after-x-amount-of-seconds to hide div after 4 seconds*/
+
+
 /*--Navigation--*/
 
 .nav-wrapper {
