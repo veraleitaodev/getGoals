@@ -7,8 +7,7 @@ This is the website built to meet the requirements for milestone 3 of fullstack 
 I aim to develop and test a platform to enable individuals life by setting and planning their goals. “Failing to plan is planning to fail”; “You become what you think about most of the time”.  
 This platform will enable people to edit their goals, store them according to priority. The Individual is encouraged to use a forum to publish accomplishments.
 
-<h2 align="center"><img src="static/images/multiple-devices.jpeg
-}" alt="website image on multiple devices></h2>
+![responsive app](static/images/multiple-devices.jpeg)
 
 ## User Experience (UX)
 
@@ -27,9 +26,8 @@ This platform will enable people to edit their goals, store them according to pr
     3. As a Returning Visitor, I want to be able to create, update and delete my goals.
 
   - #### Frequent User Goals
-    1. As a Frequent User, I want to explore content in image boards online related to my goals.
+    1. As a Frequent User, I want to explore content in image boards online related to my goals. As images are a powerful tool to help focus in goals.
     2. As a Frequent User, I want to easily access my current goals and costumize them.
-    3. As a Frequent User, I want to see my progression as I advance to meet my goals.
 
 - ### Design
   - #### Colour Scheme
@@ -74,30 +72,6 @@ This platform will enable people to edit their goals, store them according to pr
 
 - Create, update and delete data
 
-* **Header** (this feature is present in every page):  
-   a) **Logo** on the Left side with link to home page;  
-   b) **3 vertical dots** (mobile view) on the right side of navigation bar - opens into a menu with links to Home, My Progress and New Goal pages;  
-   c) **Pages Links** (desktop view) links to Home, My Progress and New Goal pages.
-
-  - **Footer** (this feature is present in every page):  
-    a) **social media Icons** - with link to social media pages;
-
-  - **Home page**:  
-    a) header and footer as explained above;  
-    b)**Add** add button that links to the Goals form page - mobile size screen only;  
-    c) **goals overview** 3 card with a goal each are present on the home page. These cards are static as there is no backend support for the data added to the form;
-
-  - **Goals form page**(the forms in this page are disabled as there is no backend support at this stage):  
-    a) header and footer as axplained above;  
-    b) **hero container** - an image icon is present where it can be added to the container (feature disabled);  
-    c) **Goal category** - dropdown menu to choose from long term, medium term or short term goal;  
-    d) **form** to input (disabled):
-
-                goal title;
-                goal description;
-                starting date;
-                deadline;
-
 ## Technologies Used
 
 ### Languages Used
@@ -138,17 +112,7 @@ This platform will enable people to edit their goals, store them according to pr
 14. [MongoDb:](https://www.mongodb.com/)
     - MongoDB is a document database and is used to store the data input from the forms in new goals page. The data stored is created, updated and deleted in mongoDb through the app.
 
-## 1. Project
-
-### 2.4 **Features**:
-
-### 2.5 **Wireframes**:
-
-## 3.Technologies and Libraries
-
-## 4.Resources and Tools
-
-## 5. Testing
+## Testing
 
 Please refer to [testing.md](testing.md) file to find the report on the testing carried out in this project.
 
