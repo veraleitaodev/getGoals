@@ -54,4 +54,35 @@ In order to test input field new requirements:
 ## 3. Write about how each part of your responsive website behaves on different screen sizes.
 And if you want to knock the grade for testing all the way up to the max:
 ## 4. Manually go though every part of your site and write out how you confirmed that each link, hover effect and other interactive parts of the site work as you expect.
-## 5. List any bugs you came across while creating the site and while testing it. Include the fixes you came up with. (I have two sections here, one for fixed bugs and one for bugs I have not found a solution for yet.)
+## 5. List any bugs you came across while creating the site and while Testing
+
+## Testing
+
+To return to the previous document, please click [here](https://github.com/veraleitaodev/setGoals/blob/master/README.md).
+
+- [**Testing User Stories**](#Testing-User-Stories)
+    - [Project Stakeholders](#Project-stakeholders)
+    - [New users](#New-users)
+    - [Returning users](#Returning-users)
+    - [Tablet user](#Tablet-user)
+- [**Validators and Lintners**](#Validators-and-lintners)
+    - [HTML](#HTML)
+    - [CSS](#CSS)
+    - [JavaScript](#JavaScript)
+    - [Python](#Python)
+- [**Compatibility tests**](#Compatibility-tests)
+    - [Using different browsers](#Using-different-browsers)
+    - [Using different devices](#Using-different-devices)
+    - [Using different screen sizes](#Using-different-screen-sizes)
+- [**Manual tests**](#Manual-tests)
+    - [Menu bar](#Menu-bar)
+    - [Footer](#Footer)
+    - [Home](#Home)
+    - [Top Tips](#Top-tips)
+    - [Sign-in](#Sign-in)
+    - [Sign-up](#Sign-up)
+    - [My tasks](#My-tasks)
+    - [Add a new task](#Add-a-new-task)
+    - [Edit task](#Edit-task)
+
+### Testing User Stories

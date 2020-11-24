@@ -4,6 +4,9 @@
 
 This is the website built to meet the requirements for milestone 3 of fullstack developer diploma at Code Institute. It is designed to be responsibe and accessible on a range of devices, making it easy to navigate for users and visiting users.
 
+I aim to develop and test a platform to enable individuals life by setting and planning their goals. “Failing to plan is planning to fail”; “You become what you think about most of the time”.  
+This platform will enable people to edit their goals, store them according to priority. The Individual is encouraged to use a forum to publish accomplishments.
+
 <h2 align="center"><img src="#" alt="website image on multiple devices></h2>
 
 ## User Experience (UX)
@@ -70,57 +73,7 @@ This is the website built to meet the requirements for milestone 3 of fullstack 
 -   Register and Login
 
 -   Create, update and delete data
-
-## Technologies Used
-
-### Languages Used
-
--   [HTML5](https://en.wikipedia.org/wiki/HTML5)
--   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [Python3]( https://en.wikipedia.org/wiki/Python_(programming_language))
-
-### Frameworks, Libraries & Programs Used
-
-1. [Materialize 1.0.0:](https://materializecss.com)
-    - Bootstrap was used to assist with the responsiveness and styling of the website.
-1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import Gruppo and Noto Sans fonts into the style.css file which is used on all pages throughout the project.
-1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used throughout the website to add icons for UX purposes.
-1. [jQuery:](https://jquery.com/)
-    - jQuery came with Materialize to make the navbar toggle, the collapsible bars, dropdown menu, the parallax effect in home page, the tooltip effect in edit and delete Icons, the card hide/show content, but it was also used for the alert box with function in JavaScript.
-1. [Git](https://git-scm.com/)
-    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-1. [GitHub:](https://github.com/)
-    - GitHub is used to store the projects code after being pushed from Git.
-1. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
-    - Photoshop was used to resize images for the website.
-1. [Balsamiq:](https://balsamiq.com/)
-    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
-1. [Adobe Color:](https://color.adobe.com/create/color-wheel)
-    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
-1. [Hover.css:](https://ianlunn.github.io/Hover/)
-    - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
-
-    
-
-
-
-
-
-
-
-
-
-## 1. Project
-
-  I aim to develop and test a platform to enable individuals life by setting and planning their goals. “Failing to plan is planning to fail”; “You become what you think about most of the time”.  
-  This platform will enable people to edit their goals, store them according to priority. The Individual is encouraged to use a forum to publish accomplishments.
-
-
-
-### 2.4 __Features__:
-  * __Header__ (this feature is present in every page):  
+* __Header__ (this feature is present in every page):  
     a) __Logo__ on the Left side with link to home page;  
     b) __3 vertical dots__ (mobile view) on the right side of navigation bar - opens into a menu with links to Home, My Progress and New Goal pages;  
     c) __Pages Links__ (desktop view) links to Home, My Progress and New Goal pages.
@@ -143,6 +96,69 @@ This is the website built to meet the requirements for milestone 3 of fullstack 
                 goal description;  
                 starting date;  
                 deadline;
+
+## Technologies Used
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Javascript]( https://en.wikipedia.org/wiki/JavaScript)
+-   [Python3]( https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Frameworks, Libraries & Programs Used
+
+1. [Materialize 1.0.0:](https://materializecss.com)
+    - Materialize was used to assist with the responsiveness and styling of the website.
+2. [Google Fonts:](https://fonts.google.com/)
+    - Google fonts were used to import Gruppo and Noto Sans fonts into the style.css file which is used on all pages throughout the project.
+3. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used throughout the website to add icons for UX purposes.
+4. [jQuery:](https://jquery.com/)
+    - jQuery came with Materialize to make the navbar toggle, the collapsible bars, dropdown menu, the parallax effect in home page, the tooltip effect in edit and delete Icons, the card hide/show content, but it was also used for the alert box with function in JavaScript.
+5. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+6. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+7. [Photoshop:](https://www.adobe.com/ie/products/photoshop.html)
+    - Photoshop was used to resize images for the website.
+8. [Balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create the [wireframes](https://github.com/) during the design process.
+9. [Adobe Color:](https://color.adobe.com/create/color-wheel)
+    - Adobe Color was used to generate the color scheme.
+10. [Flask:](https://pypi.org/project/Flask/)
+    - Flask was used in the html templates including a base template.
+11. [Jinja2:](https://en.wikipedia.org/wiki/Jinja_(template_engine))
+    - Jinja is part of the Flask library and was used throughout this project. 
+12. [Werkzeug:](https://pypi.org/project/Werkzeug/)
+    - Werkzeug is part of the Flask library and was used throughout this project to encrypt data.
+13. [PyMongo:](https://pypi.org/project/pymongo/)
+    - The pymongo package is a native Python driver for MongoDB. crucial in the communication of python with MongoDB, both used in this project.
+14. [MongoDb:](https://www.mongodb.com/)
+    - MongoDB is a document database and is used to store the data input from the forms in new goals page. The data stored is created, updated and deleted in mongoDb through the app.
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+## 1. Project
+
+ 
+
+
+
+### 2.4 __Features__:
+  
 
 ### 2.5 __Wireframes__:
 
