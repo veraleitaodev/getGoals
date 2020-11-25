@@ -44,9 +44,9 @@
                 {% if session.user %}
                     <li><a href="{{ url_for('set_goals') }}">My Goals</a></li>
                     <li><a href="{{ url_for('new_goal') }}">New Goal</a></li>
-                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log out</a></li>
                 {% else %}
-                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('login') }}">Log in</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                 {% endif %}
             </ul>
@@ -67,9 +67,9 @@
         {% if session.user %}
             <li><a href="{{ url_for('set_goals') }}">My Goals</a></li>
             <li><a href="{{ url_for('new_goal') }}">New Goal</a></li>
-            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
         {% else %}
-            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('login') }}">Log in</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
         {% endif %}
       </ul>

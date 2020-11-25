@@ -10,8 +10,10 @@ if os.path.exists("env.py"):
     import env
 
 
+# creates an instance of flask and assign it to the app variable
 app = Flask(__name__)
 
+# Environment variables
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
@@ -23,7 +25,8 @@ mongo = PyMongo(app)
 @app.route('/home')
 def home():
     """
-    On page load, home page is displayed.
+    On page load, or when redirected to /home, home page is rendered.
+
     """
     return render_template('index.html')
 
