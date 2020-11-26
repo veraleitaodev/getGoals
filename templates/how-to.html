@@ -59,9 +59,10 @@
     </ul>
   </div>
 </div>
-<div class="row image-how-to">
-  <div class="col"></div>
-  <div class="col s4 left">
+{% if not session.user %}
+<div class="row">
+ 
+  <div class="col s5 left">
     <h6 class="home-text">Already have an account?</h6>
     <a
       href="{{ url_for('login')}}"
@@ -71,9 +72,11 @@
       <i class="material-icons right">send</i>
     </a>
   </div>
-</div>
-{% if not session.user %}
-
+  </div>
 {% endif %}
+<div class="row image-how-to"></div>
+
+
+
 
 {% endblock %}

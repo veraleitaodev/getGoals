@@ -202,7 +202,7 @@ a.btn-floating {
   font-size: 12px;
 }
 
-/*-- How To page --*/
+/*-- SMART page --*/
 
 .image-how-to {
   background-color: var(--color-8);
@@ -327,12 +327,7 @@ button.btn.edit-submit-button {
   a.brand-logo {
     font-size: 34px;
   }
-  .parallax-container {
-      height: 500px;
-  }
-  .parallax-container.container-1 {
-  max-height: 800px;
-  }
+
 }
 /* Medium devices (tablets, more than 768px)*/
 @media (min-width: 768px) {
