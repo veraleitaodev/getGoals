@@ -188,3 +188,14 @@ when the visitor is logged in, the links available are: Home, SMART?, My goals, 
     -   the top row has 3 icons - Home, instagram and Pinterest - all of the icons are centered to the middle as intended and with appropriate size for visibility;
     The links in the icons are functional (home redirects to home page, instagram redirects to instagram landing page and pinterest redirects to pinterest landing page) and have hover effect;  
     -   the bottom row presentes the copyrights logo. the footer does not change throughout different pages.
+
+#### Home page
+-   ***mobile view*** - parallax effect functional with 2 similar images giving the illusion that is one continuous image. Hero section with Headline and subheading appropriatly sized and spaced. Subheading with pulse effect in the word SMART with active link to SMART? page;  
+Hero section showing log in button when visitor is logged out and hidden when visitor is logged in. Hero section also displays an illustration with same colour scheme illustrating a women planning - the image is centered and not bleeding out.  
+Scrool effect functional and bottom image complements the top image, intending to reveal the road ahead when scrolling down.
+
+-   ***desktop view*** - parallax effect functional with 2 similar images giving the illusion that is one continuous image the top image would benefit from having a bigger height - . Hero section with Headline and subheading appropriatly sized and spaced. Subheading with pulse effect in the word SMART with active link to SMART? page;  
+Hero section showing log in button when visitor is logged out and hidden when visitor is logged in. Hero section also displays an illustration with same colour scheme illustrating a women planning - the image is centered and not bleeding out.  
+Scrool effect functional and bottom image complements the top image, intending to reveal the road ahead when scrolling down.
+
+

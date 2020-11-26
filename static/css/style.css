@@ -191,11 +191,11 @@ h4.home-page {
 }
 
 .parallax-container.container-1 {
-  max-height: 350px;
+  height: 350px;
 }
 
 .parallax-container.container-2 {
-  max-height: 250px;
+  height: 250px;
 }
 
 a.btn-floating {
@@ -315,14 +315,23 @@ button.btn.edit-submit-button {
   a.brand-logo {
     font-size: 32px;
   }
+  .parallax-container {
+      height: 500px;
+  }
+  .parallax-container.container-1 {
+  height: 500px;
+}
 }
 /* Small devices (landscape phones, more than 576px)*/
 @media (min-width: 576px) {
   a.brand-logo {
     font-size: 34px;
   }
+  .parallax-container {
+      height: 500px;
+  }
   .parallax-container.container-1 {
-  max-height: 500px;
+  max-height: 800px;
   }
 }
 /* Medium devices (tablets, more than 768px)*/
