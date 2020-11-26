@@ -230,5 +230,59 @@ Illustration with same colour scheme is located in the bottom right corner of th
 
 #### Log in page
 
--   **_mobile view_** -  centered heading, 
-Form with username and password fields
+-   **_mobile view_** and **_desktop view_** -  centered heading 
+Form with username, password and submit fields.
+Submit button in correct position and with wave Materialize feature functional.
+Materialize form fields with green bottom bar when input required format and red when format is not allowed - functional.
+Bellow button there is a text saying "Don't have an account yet?" followed by text "Register here." in blue underlined ith a link to register page, link is functional.
+
+
+  
+  |             test              |             expected result              |              actual result               |
+  | :---------------------------: | :--------------------------------------: | :--------------------------------------: |
+  |     LOG IN page |       |       |
+  | "Username" field requirements: a-z, A-Z, 0-9 and between 6 to 12 characters       |                                          |
+  |         5 letters  lower case    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 letters  lower case | allowed  | allowed. |
+  |         12 letters  lower case    |   allowed     | allowed |
+  |         13 letters   lower case   | not possible  | not possible to input more than 12 characters |
+  |         special character plus 5 letters lower case   |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         5 letters  Upper case    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 letters  Upper case | allowed  | allowed. |
+  |         12 letters  Upper case    |   allowed     | allowed |
+  |         13 letters   Upper case   | not possible  | not possible to input more than 12 characters |
+  |         special character plus 5 letters upper case  |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         3 letters lower case and 3 letters upper case |  allowed     | allowed |
+  |         5 digits    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 digits | allowed  | allowed |
+  |         12 digits   |   allowed     | allowed |
+  |         13 digits   | not possible  | not possible to input more than 12 characters |
+  |         special character plus 5 ldigits  |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         2 digits 2 letters lower case and 2 letters upper case |  allowed     | allowed |
+  | _____________________________ |__________________________________________|_________________________________________ | 
+  | "Password"  requirements: a-z, A-Z, 0-9 and between 6 to 12 characters       |                                          |
+  |         5 letters  lower case    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 letters  lower case | allowed  | allowed. |
+  |         12 letters  lower case    |   allowed     | allowed |
+  |         13 letters   lower case   | not possible  | not possible to input more than 12 characters |
+  |         special character plus 5 letters lower case   |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         5 letters  Upper case    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 letters  Upper case | allowed  | allowed. |
+  |         12 letters  Upper case    |   allowed     | allowed |
+  |         13 letters   Upper case   | not possible  | not possible to input more than 12 characters |
+  |         special character plus 5 letters upper case  |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         3 letters lower case and 3 letters upper case |  allowed     | allowed |
+  |         5 digits    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 digits | allowed  | allowed |
+  |         12 digits   |   allowed     | allowed |
+  |         13 digits   | not possible  | not possible to input more than 12 characters |
+  |         special character plus 5 digits  |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         2 digits 2 letters lower case and 2 letters upper case |  allowed     | allowed |
+  | _____________________________ |__________________________________________|_________________________________________ | 
+  |     incorrect username and password | flash message: "Incorrect Username and/or password" | flash message: "Incorrect Username and/or password" |
+  |     incorrect username      | flash message: "Incorrect Username and/or password" | flash message: "Incorrect Username and/or password" |
+  |     existing username incorrect password | flash message: "Incorrect Username and/or password" | no flash message! redirect to login page with empty fields to correct added else condition to password verification (line 108 at run.py) |
+  |     after correction: existing username incorrect password | flash message: "Incorrect Username and/or password" | flash message: "Incorrect Username and/or password" |
+  |     correct username and correct password | flash message: "Welcome {username}" redirects to My goals page | flash message: "Welcome {username}" redirects to My goals page |
+
+The flash messages appear in white text with chosen background colour as expected and fade after expected time. The bug found is that the page keeps the margin at the top and does not reset unless the page is reloaded.

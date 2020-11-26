@@ -39,33 +39,25 @@ h5.center-align {
   margin-bottom: 24px;
 }
 
-.flashed_messages {
-  -webkit-animation: seconds 4.0s forwards;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-delay: 4s;
-  animation: seconds 4.0s forwards;
-  animation-iteration-count: 1;
-  animation-delay: 4s;
-  position: relative;
+.fade-out {
+  animation: fade 5s;
+  -webkit-animation: fade 5s;
+  -moz-animation: fade 5s;
 }
-@-webkit-keyframes seconds {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    left: -9999px; 
-  }
+
+/* Animate opacity */
+@keyframes fade {
+  from { opacity: 1 }
+  to { opacity: 0 }
 }
-@keyframes seconds {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    left: -9999px; 
-  }
-} /* code obtained from https://stackoverflow.com/questions/26393539/css-solution-to-hide-div-after-x-amount-of-seconds to hide div after 4 seconds*/
+@-moz-keyframes fade {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+@-webkit-keyframes fade {
+  from { opacity: 1 }
+  to { opacity: 0 }
+} /* code obtained from https://stackoverflow.com/questions/33424138/how-to-remove-a-div-with-fade-out-effect-in-javascript to fade out and hide element */
 
 
 /*--Navigation--*/
