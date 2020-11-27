@@ -255,6 +255,7 @@ i.tooltipped {
 .image-reveal span,
 .image-reveal p {
   margin-bottom: 18px;
+  word-wrap: break-word;
 }
 
 .image-reveal p i {

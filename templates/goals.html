@@ -48,9 +48,11 @@
 
         <span class="card-title center">{{ goal.goal_title }}</span>
         <hr />
+        {% for category in categories %}
+        <p><i class="material-icons">topic</i> {{ category.category_name }}</p>
+        {% endfor %}
         <p><i class="material-icons">subject</i> {{ goal.goal_description }}</p>
         <p><i class="material-icons">timelapse</i> {{ goal.due_date }}</p>
-        <p><em>{{ goals.author }}</em></p>
          </div>
       </div>
     </div>

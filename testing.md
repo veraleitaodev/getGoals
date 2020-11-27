@@ -382,26 +382,36 @@ Style, color scheme and layout appeared as expected.
 
 -   **_mobile view_** -  centered heading;  
   - A goal card per row.
+  -   **_desktop view_** -  centered heading;
+  - 2 cards per row in medium size screens (tested 768px) and 3 cards per row in large size screens (tested 1024px and 1440px);  
   - goal card:  static image in top container;  
                 1st text row with goal title as per input and 3 vertical dots on the right side - if title occupies 2 lines, half of the icons in the card disappear- replaced card "small" class by "medium" - image started stretching when changed screen sizes, to fix this, increased max-height which makes part of the image hidden at some screen sizes but not streched;  
                 2nd row with 2 icons on the right side, a pencil for edit and a bin for delete function;
                 reveal container has Title at the top with X on the right to enable hiding the container;  
-                reveal container has 
+                reveal container has ruler container with goal description - if word is too long, it bleeds out of the card - added word-wrap property to css code to fix bug;  
+                reveal container with bottom row showing end date if any (icon present with and without date);
+                reveal container with background image at the bottom right corner;
+                reveal container missing category chosen - 
 
   |             test              |             expected result              |              actual result               |
   | :---------------------------: | :--------------------------------------: | :--------------------------------------: |
   |     GOAL CARD  features     |                                          |                                          |
-  | "Title" field between 5 to 30 characters       |                         |                                          |
-  |         leave empty |     "please fill in this field" alert   |   "please fill in this field" alert   |
-  |         4 letters |     "please lengthen this text to 5 characters or more..." alert   | "please lengthen this text to 5 characters or more..." alert   |
-  |         5 letters | allowed  | allowed - input data appears in the goal card |
-  |        15 letters | allowed  | allowed - input data appears in the goal card |
-  |         30 letters | allowed  | allowed - input data appears in the goal card |
-  |         31 letters | not possible  | not possible  |
+  | click in image, title or 3 vertical dots icon| reveals card added content | reveals card added content | 
+  |    hover pencil icon |     information box appears saying "edit"  |   information box appears saying "edit"  |
+  |    hover bin icon |     information box appears saying "delete"  |   information box appears saying "delete"  |
+  |    click pencil icon |    redirects to edit-goal template  |   redirects to edit-goal template  |
+  |    click bin icon |    pop-up confirmation box "are you sure you want to delete this goal?" |   pop-up confirmation box   |
+  | pop-up confirmation box with Cancel button in colour scheme and text "YES, DELETE IT!" to the right of the cancel button | 
+  |     click cancel button | redirects to my goals page | redirects to my goals page |
+  |     click text "YES, DELETE IT!" | deletes goal and flash message "Goal Deleted" and redirect to my goals page | deletes goal and flash message "Goal Deleted" and redirect to my goals page |
+
+
+#### edit template
+
+edit page should have similar layout of new goal page with different header and with form fields populated with current data.
 
 
 
--   **_desktop view_** -  centered heading;
 
 
 
