@@ -279,10 +279,105 @@ Bellow button there is a text saying "Don't have an account yet?" followed by te
   |         special character plus 5 digits  |   "please match the format requested" alert   | "please match the format requested" alert |
   |         2 digits 2 letters lower case and 2 letters upper case |  allowed     | allowed |
   | _____________________________ |__________________________________________|_________________________________________ | 
-  |     incorrect username and password | flash message: "Incorrect Username and/or password" | flash message: "Incorrect Username and/or password" |
-  |     incorrect username      | flash message: "Incorrect Username and/or password" | flash message: "Incorrect Username and/or password" |
-  |     existing username incorrect password | flash message: "Incorrect Username and/or password" | no flash message! redirect to login page with empty fields to correct added else condition to password verification (line 108 at run.py) |
-  |     after correction: existing username incorrect password | flash message: "Incorrect Username and/or password" | flash message: "Incorrect Username and/or password" |
-  |     correct username and correct password | flash message: "Welcome {username}" redirects to My goals page | flash message: "Welcome {username}" redirects to My goals page |
+  |     incorrect username and incorrect password | flash message: "Incorrect Username and/or password" | flash message: "Incorrect Username and/or password" |
+  |     existing username and incorrect password | flash message: "Incorrect Username and/or password" | no flash message! only redirects to login page with empty fields. To correct bug, added else condition to password verification (line 108 at run.py) |
+  |     after correction: existing username and incorrect password | flash message: "Incorrect Username and/or password" | flash message: "Incorrect Username and/or password" |
+  |     correct username and correct password | redirects to My goals page with flash message: "Welcome {username}" | redirects to My goals page with flash message: "Welcome {username}" |
 
-The flash messages appear in white text with chosen background colour as expected and fade after expected time. The bug found is that the page keeps the margin at the top and does not reset unless the page is reloaded.
+The flash messages appear in white text with chosen background colour as expected and fade after expected time. The bug found is that the page keeps the margin at the top and does not reset unless the page is reloaded - updated code and retested - element for flash message disapears after 5 seconds and margin disapears.  
+
+#### Register page
+
+-   **_mobile view_** and **_desktop view_** -  centered heading;
+Materialize input forms with username, email and password fields and submit button. Email is collected and stored for registration but at this stage there is no use for this information. In order to reduce unnecessary errors, the email input are has been removed.
+after button there is a text with link to log in page - link is functional.
+Register button with Materialize Wave feature and functional.
+
+|             test              |             expected result              |              actual result               |
+  | :---------------------------: | :--------------------------------------: | :--------------------------------------: |
+  |     REGISTER page |       |       |
+  | "Username" field requirements: a-z, A-Z, 0-9 and between 6 to 12 characters       |                                          |
+  |         5 letters  lower case    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 letters  lower case | allowed  | allowed. |
+  |         12 letters  lower case    |   allowed     | allowed |
+  |         13 letters   lower case   | not possible  | not possible to input more than 12 characters |
+  |         special character plus 5 letters lower case   |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         5 letters  Upper case    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 letters  Upper case | allowed  | allowed. |
+  |         12 letters  Upper case    |   allowed     | allowed |
+  |         13 letters   Upper case   | not possible  | not possible to input more than 12 characters |
+  |         special character plus 5 letters upper case  |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         3 letters lower case and 3 letters upper case |  allowed     | allowed |
+  |         5 digits    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 digits | allowed  | allowed |
+  |         12 digits   |   allowed     | allowed |
+  |         13 digits   | not possible  | not possible to input more than 12 characters |
+  |         special character plus 5 digits  |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         2 digits 2 letters lower case and 2 letters upper case |  allowed     | allowed |
+  | _____________________________ |__________________________________________|_________________________________________ | 
+  | "Password"  requirements: a-z, A-Z, 0-9 and between 6 to 12 characters       |                                          |
+  |         5 letters  lower case    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 letters  lower case | allowed  | allowed. |
+  |         12 letters  lower case    |   allowed     | allowed |
+  |         13 letters   lower case   | not possible  | not possible |
+  |         special character plus 5 letters lower case   |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         5 letters  Upper case    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 letters  Upper case | allowed  | allowed. |
+  |         12 letters  Upper case    |   allowed     | allowed |
+  |         13 letters   Upper case   | not possible  | not possible |
+  |         special character plus 5 letters upper case  |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         3 letters lower case and 3 letters upper case |  allowed     | allowed |
+  |         5 digits    |     "please match the format requested" alert   |"please match the format requested" alert|
+  |         6 digits | allowed  | allowed |
+  |         12 digits   |   allowed     | allowed |
+  |         13 digits   | not possible  | not possible |
+  |         special character plus 5 digits  |   "please match the format requested" alert   | "please match the format requested" alert |
+  |         2 digits 2 letters lower case and 2 letters upper case |  allowed     | allowed |
+  | _____________________________ |__________________________________________|_________________________________________ | 
+  | existing username | flash message: "Username already exists" | flash message: "Username already exists" |
+  |     new username and correct format password | flash message: "You are now registered" | flash message: "You are now registered" |
+
+  The flash messages appear in white text with chosen background colour as expected and fade after expected time. The element for flash message disapears after 5 seconds and margin disapears.
+
+#### New Goal
+
+-   **_mobile view_** and **_desktop view_** -  centered heading;  
+form test
+
+|             test              |             expected result              |              actual result               |
+| :---------------------------: | :--------------------------------------: | :--------------------------------------: |
+|     NEW GOAL page : form      |                                          |                                          |
+| "Title" field between 5 to 30 characters       |                         |                                          |
+|         leave empty |     "please fill in this field" alert   |   "please fill in this field" alert   |
+|         4 letters |     "please lengthen this text to 5 characters or more..." alert   | "please lengthen this text to 5 characters or more..." alert   |
+|         5 letters | allowed  | allowed - input data appears in the goal card |
+|        15 letters | allowed  | allowed - input data appears in the goal card |
+|         30 letters | allowed  | allowed - input data appears in the goal card |
+|         31 letters | not possible  | not possible  |
+| _____________________________ |__________________________________________|_________________________________________ | 
+| "Category" when clicked has dropdown menu showing categories stored in mongodb    |                                          | 
+|     selected one category | allowed | allowed - selected category appears in the goal card|
+|     not selected a category |   clicking submit will not work | clicking submit will not work | 
+| _____________________________ |__________________________________________|_________________________________________ | 
+| "Add image" this feature is not available at this stage   |                                          | 
+|     click in input area |   disabled input area - greyed out | disabled input area - greyed out | 
+| _____________________________ |__________________________________________|_________________________________________ | 
+| "Describe your new goal" allowed between 3 to 200 characters |            | 
+|         leave empty |     "please fill in this field" alert   |   "please fill in this field" alert   |
+|         2 letters |     "please lengthen this text to 3 characters or more..." alert   | "please lengthen this text to 3 characters or more..." alert   |
+|         3 letters | allowed  | allowed - input data appears in the goal card |
+|        20 letters | allowed  | allowed - input data appears in the goal card |
+|         200 letters | allowed  | allowed - input data appears in the goal card |
+|         201 letters | not possible  | not possible  |
+| _____________________________ |__________________________________________|_________________________________________ | 
+| "End Date (optional)" when clicked a calendar appears   |               |                 |
+|     selecting a date | allowed | allowed - selected date appears in the goal card|
+|     leaving date unselected |   allowed | allowed - in the goal card it appears an empty space |
+
+Submit button did not have wave effect but button was functional. Added materialize wave-effect class and button then had wave effect.
+
+
+
+
+
+

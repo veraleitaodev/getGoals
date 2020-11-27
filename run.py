@@ -37,7 +37,7 @@ def register():
     Allows new user registration.
 
     To enable registration first it checks if
-    username and/ or email already exist in database.
+    username already exist in database.
     If it doesn't exist, registration is carried out by
     storing username, email and password onto database.
     Password is hashed for password security.
@@ -53,18 +53,8 @@ def register():
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
-
-            # check if email already exists in db"""
-        existing_user = mongo.db.users.find_one(
-            {"email": request.form.get("email").lower()})
-
-        if existing_user:
-            flash("Email already exists")
-            return redirect(url_for("register"))
-
         new_user = {
             "username": request.form.get("username").lower(),
-            "email": request.form.get("email").lower(),
             "password": generate_password_hash(
                             request.form.get("password"))
         }
