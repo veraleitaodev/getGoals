@@ -19,6 +19,7 @@
               value="{{ goal.goal_title }}"
               minlength="5"
               maxlength="30"
+              class="validate"
               required
             />
             <label for="goal_title">Title</label>
@@ -39,9 +40,10 @@
               <option value="{{ category.category_name }}">
                 {{ category.category_name }}
               </option>
+              {% endfor %}
             </select>
-            <label for="category_name">{{ category.category_name }}</label>
-            {% endfor %}
+            <label for="category_name">{{ goal.category_name }}</label>
+            
           </div>
         </div>
         <div class="row">
@@ -58,13 +60,12 @@
             <textarea
               id="goal_description"
               name="goal_description"
-              class="materialize-textarea"
-              value="{ goal.goal_description }}"
+              class="materialize-textarea validate"
               minlength="3"
-              maxlength="80"
+              maxlength="200"
               required
-            ></textarea>
-            <label for="goal_description">{{ goal.goal_description }}</label>
+            >{{- goal.goal_description -}}</textarea>
+            <label for="goal_description">goal description</label>
           </div>
         </div>
         <div class="row">
