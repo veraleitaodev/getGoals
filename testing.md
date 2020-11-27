@@ -376,6 +376,34 @@ form test
 
 Submit button did not have wave effect but button was functional. Added materialize wave-effect class and button then had wave effect.
 
+Style, color scheme and layout appeared as expected.
+
+#### My Goals
+
+-   **_mobile view_** -  centered heading;  
+  - A goal card per row.
+  - goal card:  static image in top container;  
+                1st text row with goal title as per input and 3 vertical dots on the right side - if title occupies 2 lines, half of the icons in the card disappear- replaced card "small" class by "medium" - image started stretching when changed screen sizes, to fix this, increased max-height which makes part of the image hidden at some screen sizes but not streched;  
+                2nd row with 2 icons on the right side, a pencil for edit and a bin for delete function;
+                reveal container has Title at the top with X on the right to enable hiding the container;  
+                reveal container has 
+
+  |             test              |             expected result              |              actual result               |
+  | :---------------------------: | :--------------------------------------: | :--------------------------------------: |
+  |     GOAL CARD  features     |                                          |                                          |
+  | "Title" field between 5 to 30 characters       |                         |                                          |
+  |         leave empty |     "please fill in this field" alert   |   "please fill in this field" alert   |
+  |         4 letters |     "please lengthen this text to 5 characters or more..." alert   | "please lengthen this text to 5 characters or more..." alert   |
+  |         5 letters | allowed  | allowed - input data appears in the goal card |
+  |        15 letters | allowed  | allowed - input data appears in the goal card |
+  |         30 letters | allowed  | allowed - input data appears in the goal card |
+  |         31 letters | not possible  | not possible  |
+
+
+
+-   **_desktop view_** -  centered heading;
+
+
 
 
 

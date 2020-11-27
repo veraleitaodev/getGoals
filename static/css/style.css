@@ -224,7 +224,7 @@ i.material-icons.logo-icon {
 
 .goal-image{
     width: 70%;
-    max-height: 300px;
+    max-height: 350px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -250,17 +250,6 @@ i.tooltipped {
 
 .modal-close.btn {
   background-color: var(--color-4);
-}
-
-.progress {
-  margin: 10px;
-  width: 700px;
-} /*---Codepen progress bar obtained from https://codepen.io/gustitammam/pen/RRXGdj and adapted to this project --*/
-
-progress[value]::-webkit-progress-bar {
-  background-color: var(--color-9);
-  border-radius: 3px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
 }
 
 .image-reveal span,
