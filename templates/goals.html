@@ -48,14 +48,13 @@
 
         <span class="card-title center">{{ goal.goal_title }}</span>
         <hr />
-        {% for category in categories %}
-        <p><i class="material-icons">topic</i> {{ category.category_name }}</p>
-        {% endfor %}
+        <p><i class="material-icons">topic</i> {{ goal.category_name }}</p>
         <p><i class="material-icons">subject</i> {{ goal.goal_description }}</p>
         <p><i class="material-icons">timelapse</i> {{ goal.due_date }}</p>
-         </div>
+        
       </div>
     </div>
+  </div>
 
     <!-- Modal Structure -->
     <div id="#modalDelete{{ loop.index }}" tabindex="-1" class="modal">

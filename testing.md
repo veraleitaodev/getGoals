@@ -391,7 +391,7 @@ Style, color scheme and layout appeared as expected.
                 reveal container has ruler container with goal description - if word is too long, it bleeds out of the card - added word-wrap property to css code to fix bug;  
                 reveal container with bottom row showing end date if any (icon present with and without date);
                 reveal container with background image at the bottom right corner;
-                reveal container missing category chosen - 
+                reveal container missing category chosen - added to the reveal container.
 
   |             test              |             expected result              |              actual result               |
   | :---------------------------: | :--------------------------------------: | :--------------------------------------: |
