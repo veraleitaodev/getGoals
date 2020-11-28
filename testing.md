@@ -1,4 +1,3 @@
-## 5.Tests
 
 ### 5.1. Validation
 
@@ -8,44 +7,8 @@
 - Testing code with inspect feature of Chrome browser
 - Testing register.html by input
 
-  |             input             |             expected result              |              actual result               |
-  | :---------------------------: | :--------------------------------------: | :--------------------------------------: |
-  |     new username & email      | flash message: "You are now registered!" | flash message: "You are now registered!" |
-  |       existing username       | flash message: "Username already exists" | flash message: "Username already exists" |
-  | new username & existing email |  flash message: "Email already exists"   |  flash message: "Email already exists"   |
-  |  blank spaces in all fields   |            input error alert             | flash message: "You are now registered!" |
 
-as the expected result and actual result was different for blank spaces input, I had to specify the length and type of characters acceptable.  
-In order to test input field new requirements:  
- | input | expected result | actual result |
-| :--------------------------------: | :-------------------------: | :---------------------------: |
-| blank spaces in all fields | input error alert | input error alert |
-| username less than 6 characters | input error alert | input error alert |
-| username with more than 12 characters | not possible to input more than 12 | not possible to input more than 12 |
-| not authorised character - "!" in username | input error alert | input error alert |
-| username with allowed characters and with allowed length ("testing") &: | | |
-| - email with 8 characters and: | | |
-| -- missing @ in email address | input error alert | input error alert |
-| -- digit after @ | input error alert | input error alert |
-| -- 1 character after . | input error alert | input error alert |
-| -- 5 random characters except "@" + "@" + 3 "a-z" characters + "." + 3 "a-z" characters |
 
-- use of comand pylint to identify issues with python code
-- testing forms
-
-## 6. Bugs Known
-
-### 6.1 Bugs resolved
-
-- Once on collapible navbar menu the menu would not expand - console showing error. This was corrected by correcting the jquery script in the base.html.
-- Once testing register.html by input new details in form the error "AttributeError: 'NoneType' object has no attribute 'lower'" would repeatedly appear. Checked mongodb key on heroku, mongodb and eny.py document but all ok. tried changing collection names but no different until realised that there was no "name" property in username input in register.html. Once corrected this the form worked.
-- card layout on goals.html: icons for edit and delete too small as found in lighthouse tool found in inspect developer tools in chrome browser [(screenshot of analysis)](static/images/bugs/edit-delete-bug.jpeg "lighthouse analysis regards my goals page").
-- delete will delete the card in front instead of the card that suposed to delete. to resolve this issue added {{ loop.index }} to icon id and modal followed by tabindex="-1" to correct the bug.
-
-### 6.2 Bugs unresolved
-
-- favicon
-- storing images in mongodb - 16Mb size restrictions - replaced by input for URL of image instead.
 
 # Testing
 
@@ -114,9 +77,6 @@ The following tests were conducted to test the experience of each user outlined 
 - A large amount of testing was done to ensure pages where linking as expected and code was allowing features as planned.
 - Friends and colleagues were asked to review the app in order to point out any issues.
 
-### Known Bugs
-
--
 
 ### Validators and Lintners
 
@@ -124,7 +84,7 @@ The W3C Markup Validator, W3C CSS Validator Services, pylint comand and js lint 
 
 #### HTML
 
-- [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+- [W3C Markup Validator](https://validator.w3.org/) - [Results](https://github.com/)
 
 #### CSS
 
@@ -182,32 +142,40 @@ The W3C Markup Validator, W3C CSS Validator Services, pylint comand and js lint 
 
 #### Home page
 
--   **_mobile view_** - parallax effect functional with 2 similar images giving the illusion that is one continuous image. Hero section with Headline and subheading appropriatly sized and spaced. Subheading with pulse effect in the word SMART with active link to SMART? page;  
-  Hero section showing log in button when visitor is logged out and hidden when visitor is logged in. Hero section also displays an illustration with same colour scheme illustrating a women planning - the image is centered and not bleeding out. 
-  Scrool effect functional and bottom image complements the top image, intending to reveal the road ahead when scrolling down.
+-   **_mobile view_** - parallax effect functional with 2 similar images giving the illusion that is one continuous image.
+    -   Hero section with Headline and subheading appropriatly sized and spaced. 
+    -   Subheading with pulse effect in the word SMART with active link to SMART? page;  
+    -   Hero section showing log in button when visitor is logged out and hidden when visitor is logged in. 
+    -   Hero section also displays an illustration with same colour scheme illustrating a women planning - the image is centered and not bleeding out. 
+    -   Scrool effect functional and bottom image complements the top image, intending to reveal the road ahead when scrolling down.
 
--   **_desktop view_** - parallax effect functional with 2 similar images giving the illusion that is one continuous image. The top image height fixed for screens is wider than 370px. Hero section with Headline and subheading appropriatly sized and spaced. Subheading with pulse effect in the word SMART with active link to SMART? page;  
-  Hero section showing log in button when visitor is logged out and is hidden when visitor is logged in. Hero section also displays an illustration with same colour scheme - position corrected for medium and large size screens.  
-  Scrool effect functional and bottom image complements the top image, intending to reveal the road ahead when scrolling down.
+-   **_desktop view_** - parallax effect functional with 2 similar images giving the illusion that is one continuous image.
+    -   The top image height fixed for screens is wider than 370px. Hero section with Headline and subheading appropriatly sized and spaced. 
+    -   Subheading with pulse effect in the word SMART with active link to SMART? page;  
+    -   Hero section showing log in button when visitor is logged out and is hidden when visitor is logged in. 
+    -   Hero section also displays an illustration with same colour scheme - position corrected for medium and large size screens.  
+    -   Scrool effect functional and bottom image complements the top image, intending to reveal the road ahead when scrolling down.
 
 #### SMART? page
 
--   **_mobile view_**  -  Page has centered heading at he top, has collapsible elements from Materialize. Each row has a word related to the acronym SMART and it expands into description when row is clicked - feature is functional.  
-Below collapsible elements there is log in button that should not show when user is logged in - corrected.  
-Illustration with same colour scheme is located in the bottom right corner of the page.
+-   **_mobile view_**  -  Page has centered heading at he top, has collapsible elements from Materialize. 
+    -   Each row has a word related to the acronym SMART and it expands into description when row is clicked - feature is functional.  
+    -   Below collapsible elements there is log in button that should not show when user is logged in - corrected.  
+    -   Illustration with same colour scheme is located in the bottom right corner of the page.
 
--   **_desktop view_**  -  Page has centered heading at he top, has collapsible elements from Materialize. Each row has a word related to the acronym SMART and it expands into description when row is clicked - feature is functional.  
-Below collapsible elements there is log in button that should not show when user is logged in - corrected.  
-Illustration with same colour scheme is located in the bottom right corner of the page.
+-   **_desktop view_**  -  Page has centered heading at he top, has collapsible elements from Materialize. 
+    -   Each row has a word related to the acronym SMART and it expands into description when row is clicked - feature is functional.  
+    -   Below collapsible elements there is log in button that should not show when user is logged in - corrected.  
+    -   Illustration with same colour scheme is located in the bottom right corner of the page.
 
 
 #### Log in page
 
 -   **_mobile view_** and **_desktop view_** -  centered heading 
-Form with username, password and submit fields.
-Submit button in correct position and with wave Materialize feature functional.
-Materialize form fields with green bottom bar when input required format and red when format is not allowed - functional.
-Bellow button there is a text saying "Don't have an account yet?" followed by text "Register here." in blue underlined ith a link to register page, link is functional.
+    -   Form with username, password and submit fields.
+    -   Submit button in correct position and with wave Materialize feature functional.
+    -   Materialize form fields with green bottom bar when input required format and red when format is not allowed - functional.
+    -   Bellow button there is a text saying "Don't have an account yet?" followed by text "Register here." in blue underlined ith a link to register page, link is functional.
 
 
   
@@ -262,9 +230,13 @@ The flash messages appear in white text with chosen background colour as expecte
 #### Register page
 
 -   **_mobile view_** and **_desktop view_** -  centered heading;
-Materialize input forms with username, email and password fields and submit button. Email is collected and stored for registration but at this stage there is no use for this information. In order to reduce unnecessary errors, the email input are has been removed.
-after button there is a text with link to log in page - link is functional.
-Register button with Materialize Wave feature and functional.
+    -   Materialize input forms with username, email and password fields and submit button. 
+    -   Email is collected and stored for registration but at this stage there is no use for this information. In order to reduce unnecessary errors, the email input are has been removed.
+    -   below the button there is a text with link to log in page - link is functional.
+    -   Register button with Materialize Wave feature and functional.
+    -   The flash messages appear in white text with chosen background colour as expected and fade after expected time. 
+    -   The element for flash message disapears after 5 seconds and margin disapears.
+
 
 |             test              |             expected result              |              actual result               |
   | :---------------------------: | :--------------------------------------: | :--------------------------------------: |
@@ -310,11 +282,14 @@ Register button with Materialize Wave feature and functional.
   | existing username | flash message: "Username already exists" | flash message: "Username already exists" |
   |     new username and correct format password | flash message: "You are now registered" | flash message: "You are now registered" |
 
-  The flash messages appear in white text with chosen background colour as expected and fade after expected time. The element for flash message disapears after 5 seconds and margin disapears.
-
+  
 #### New Goal
 
 -   **_mobile view_** and **_desktop view_** -  centered heading;  
+    -   New Goal is available to the logged in user through link in navigation bar; 
+    -   Submit button did not have wave effect but button was functional. Added materialize wave-effect class and button then had wave effect.
+    -   Style, color scheme and layout appeared as expected.
+
 form test
 
 |             test              |             expected result              |              actual result               |
@@ -347,9 +322,6 @@ form test
 |     selecting a date | allowed | allowed - selected date appears in the goal card|
 |     leaving date unselected |   allowed | allowed - in the goal card it appears an empty space |
 
-Submit button did not have wave effect but button was functional. Added materialize wave-effect class and button then had wave effect.
-
-Style, color scheme and layout appeared as expected.
 
 #### My Goals
 
@@ -425,6 +397,17 @@ form test
 |     clearing date |   allowed | allowed - in the goal card it appears an empty space |
 | if there is no current date, leaving the date unselected | allowed | allowed - in the goal card it appears an empty space |
 
+###  Bugs Known
 
+#### Bugs resolved
 
+- Once on collapible navbar menu the menu would not expand - console showing error. This was corrected by correcting the jquery script in the base.html.
+- Once testing register.html by input new details in form the error "AttributeError: 'NoneType' object has no attribute 'lower'" would repeatedly appear. Checked mongodb key on heroku, mongodb and eny.py document but all ok.  
+I have ried changing collection names but no different until realised that there was no "name" property in username input in register.html. Once corrected this the form worked.
+- card layout on goals.html: icons for edit and delete too small as found in lighthouse tool found in inspect developer tools in chrome browser [(screenshot of analysis)](static/images/bugs/edit-delete-bug.jpeg "lighthouse analysis regards my goals page").
+- delete will delete the card in front instead of the card that suposed to delete. to resolve this issue added {{ loop.index }} to icon id and modal followed by tabindex="-1" to correct the bug.
+
+#### Bugs unresolved
+- http://set-goals-vl.herokuapp.com/new_goal accesscible when input url in bar when visitor is not logged in. It allows to input data, however when submited an error occurs showing keyerror: user. It showld not allow access to the page if user is not logged in. At the time of writting, I have time restrictions to resolve this error.
+- http://set-goals-vl.herokuapp.com/set_goals accesscible when input url in bar when visitor is not logged in. There is access to the page but no goal cards are displayed. At the time of writting, I have time restrictions to resolve this error.
 
