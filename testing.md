@@ -67,31 +67,6 @@ And if you want to knock the grade for testing all the way up to the max:
 
 To return to the previous document, please click [here](https://github.com/veraleitaodev/setGoals/blob/master/README.md).
 
-- [**Testing User Stories**](#Testing-User-Stories)\*\*<br>
-  - [First Time Visitor Goals](#First-Time-Visitor-Goals)\*\*<br>
-  - [Returning Visitor Goals](#Returning-Visitor-Goals)
-  - [Frequent User Goals](#Frequent-User-Goals)
-  - [Tablet user](#Tablet-user)
-- [**Validators and Lintners**](#Validators-and-lintners)
-  - [HTML](#HTML)
-  - [CSS](#CSS)
-  - [JavaScript](#JavaScript)
-  - [Python](#Python)
-- [**Compatibility tests**](#Compatibility-tests)
-  - [Using different browsers](#Using-different-browsers)
-  - [Using different devices](#Using-different-devices)
-  - [Using different screen sizes](#Using-different-screen-sizes)
-- [**Manual tests**](#Manual-tests)
-  - [Menu bar](#Menu-bar)
-  - [Footer](#Footer)
-  - [Home](#Home)
-  - [SMART?](#SMART?)
-  - [Log in](#Sign-in)
-  - [Sign-up](#Sign-up)
-  - [My tasks](#My-tasks)
-  - [Add a new task](#Add-a-new-task)
-  - [Edit task](#Edit-task)
-
 ### Testing User Stories
 
 The following tests were conducted to test the experience of each user outlined earlier in the 'User Stories' section.
@@ -135,9 +110,7 @@ The following tests were conducted to test the experience of each user outlined 
 
 ### Further Testing
 
--
-- Tools such as inspect in google were used to test the aoo in all stages of the development.
-- .
+- Tools such as inspect in google were used to test app at all stages of the development.
 - A large amount of testing was done to ensure pages where linking as expected and code was allowing features as planned.
 - Friends and colleagues were asked to review the app in order to point out any issues.
 
@@ -385,14 +358,14 @@ Style, color scheme and layout appeared as expected.
   -   **_desktop view_** -  centered heading;
   - 2 cards per row in medium size screens (tested 768px) and 3 cards per row in large size screens (tested 1024px and 1440px);  
   - goal card:  static image in top container;  
-                1st text row with goal title as per input and 3 vertical dots on the right side - if title occupies 2 lines, half of the icons in the card disappear- replaced card "small" class by "medium" - image started stretching when changed screen sizes, to fix this, increased max-height which makes part of the image hidden at some screen sizes but not streched;  
-                2nd row with 2 icons on the right side, a pencil for edit and a bin for delete function;
-                reveal container has Title at the top with X on the right to enable hiding the container;  
-                reveal container has ruler container with goal description - if word is too long, it bleeds out of the card - added word-wrap property to css code to fix bug;  
-                reveal container with bottom row showing end date if any (icon present with and without date);
-                reveal container with background image at the bottom right corner;
-                reveal container missing category chosen - added to the reveal container.
-
+        - 1st text row with goal title as per input and 3 vertical dots on the right side - if title occupies 2 lines, half of the icons in the card disappear- replaced card "small" class by "medium" - image started stretching when changed screen sizes, to fix this, increased max-height which makes part of the image hidden at some screen sizes but not streched;  
+        - 2nd row with 2 icons on the right side, a pencil for edit and a bin for delete function;
+        - reveal container has Title at the top with X on the right to enable hiding the container;  
+        - reveal container has ruler container with goal description - if word is too long, it bleeds out of the card - added word-wrap property to css code to fix bug;  
+        - reveal container with bottom row showing end date if any (icon present with and without date);
+        - reveal container with background image at the bottom right corner;
+        - reveal container missing category chosen - added to the reveal container.
+  -   **_mobile view_** and **_desktop view_** 
   |             test              |             expected result              |              actual result               |
   | :---------------------------: | :--------------------------------------: | :--------------------------------------: |
   |     GOAL CARD  features     |                                          |                                          |
@@ -408,13 +381,49 @@ Style, color scheme and layout appeared as expected.
 
 #### edit template
 
-edit page should have similar layout of new goal page with different header and with form fields populated with current data.
+-   Edit page should have similar layout of new goal page with different header and with form fields populated with current data.
+-   Access to edit new goal page is possible through the pencil icon.
+-   Once edit form is submited, the user is redirected to my goals page with card showing updated data.
+-   Pressing cancel button reditects the user to My Goals page with unchanged data.
+
+-   **_mobile view_** and **_desktop view_** -  centered heading; 
 
 
+form test
 
-
-
-
+|             test              |             expected result              |              actual result               |
+| :---------------------------: | :--------------------------------------: | :--------------------------------------: |
+|     Edit GOAL page : form     |                                          |                                          |
+| "Title" field between 5 to 30 characters       |                         |                                          |
+|         leave empty |     "please fill in this field" alert   |  "please fill in this field" alert |
+|         4 letters |     "please lengthen this text to 5 characters or more..." alert   |  "please lengthen this text to 5 characters or more..." alert  |
+|         5 letters | allowed  | allowed - goal is updated |
+|        15 letters | allowed  | allowed - goal is updated |
+|         30 letters | allowed  | allowed - goal is updated |
+|         31 letters | not possible  | not possible  |
+| _____________________________ |__________________________________________|_________________________________________ | 
+| "Category" showing current category name / when clicked has dropdown menu showing categories stored in mongodb    |  
+|   leave current category name without altering | allowed |  allowed - updated card has same data |                                        | 
+|     selected one category | allowed | allowed - new selected category is updated in the goal card|
+|     not selected a category |   current category name is preselected  | current category name is preselected  |
+| _____________________________ |__________________________________________|_________________________________________ | 
+| "Add image" this feature is not available at this stage   |                                          | 
+|     click in input area |   disabled input area - greyed out | disabled input area - greyed out | 
+| _____________________________ |__________________________________________|_________________________________________ | 
+| "Describe your new goal" allowed between 3 to 200 characters |            | 
+|     data not changed |    allowed | allowed - updated card has same data |
+|         leave empty |     "please fill in this field" alert   |   "please fill in this field" alert   |
+|         2 letters |     "please lengthen this text to 3 characters or more..." alert   | "please lengthen this text to 3 characters or more..." alert   |
+|         3 letters | allowed  | allowed - goal is updated |
+|        20 letters | allowed  | allowed - goal is updated |
+|         200 letters | allowed  | allowed - goal is updated |
+|         201 letters | not possible  | not possible  |
+| _____________________________ |__________________________________________|_________________________________________ | 
+| "End Date (optional)" when clicked a calendar appears   |               | 
+|     leaving the date unaltered |  allowed | allowed - updated card has same date |
+|     selecting a date | allowed | allowed - selected date is updated in the goal card|
+|     clearing date |   allowed | allowed - in the goal card it appears an empty space |
+| if there is no current date, leaving the date unselected | allowed | allowed - in the goal card it appears an empty space |
 
 
 
