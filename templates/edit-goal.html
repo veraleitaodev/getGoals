@@ -35,7 +35,7 @@
               name="category_name"
               required
             >
-              <option value="" disabled >Choose a category</option>
+              <option value="" disabled>Choose a category</option>
               {% for category in categories %}
               <option value="{{ category.category_name }}">
                 {{ category.category_name }}
@@ -43,13 +43,17 @@
               {% endfor %}
             </select>
             <label for="category_name">{{ goal.category_name }}</label>
-            
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons new-form-icon prefix">image</i>
-            <input id="goal_image" name="goal_image" class="upload-image" disabled />
+            <input
+              id="goal_image"
+              name="goal_image"
+              class="upload-image"
+              disabled
+            />
             <label for="goal_image">Add Image (disabled)</label>
           </div>
         </div>
@@ -64,7 +68,9 @@
               minlength="3"
               maxlength="200"
               required
-            >{{- goal.goal_description -}}</textarea>
+            >
+{{- goal.goal_description -}}</textarea
+            >
             <label for="goal_description">goal description</label>
           </div>
         </div>
@@ -106,5 +112,5 @@
       </div>
     </div>
   </form>
-  {% endblock %}
 </div>
+{% endblock %}
