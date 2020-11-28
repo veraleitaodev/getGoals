@@ -89,7 +89,10 @@
       </div>
       {% endfor %} {% endif %} {% endwith %}
     </section>
-    <main>{% block content %} {% endblock %}</main>
+    <main>
+    <!--content from the specific template-->
+    {% block content %} {% endblock %}</main>
+    <!--footer-->
     <footer class="page-footer">
       <div class="container">
         <div class="row">

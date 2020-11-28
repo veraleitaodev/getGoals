@@ -39,27 +39,6 @@ h5.center-align {
   margin-bottom: 24px;
 }
 
-.fade-out {
-  animation: fade 5s;
-  -webkit-animation: fade 5s;
-  -moz-animation: fade 5s;
-}
-
-/* Animate opacity */
-@keyframes fade {
-  from { opacity: 1 }
-  to { opacity: 0 }
-}
-@-moz-keyframes fade {
-  from { opacity: 1 }
-  to { opacity: 0 }
-}
-@-webkit-keyframes fade {
-  from { opacity: 1 }
-  to { opacity: 0 }
-} /* code obtained from https://stackoverflow.com/questions/33424138/how-to-remove-a-div-with-fade-out-effect-in-javascript to fade out and hide element */
-
-
 /*--Navigation--*/
 
 .nav-wrapper {

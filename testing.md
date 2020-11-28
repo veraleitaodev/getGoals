@@ -1,31 +1,3 @@
-
-### 5.1. Validation
-
-### 5.2. Manual Testing
-
-- Testing pages are linked, once created, example css test with background colour in preview to test if link was functional
-- Testing code with inspect feature of Chrome browser
-- Testing register.html by input
-
-
-
-
-# Testing
-
-## 1. List the websites you used to validate your code and what they are for.
-
-## 2. Go through the user stories you wrote in the UX part of your readme, and explain how your website meets those needs.
-
-## 3. Write about how each part of your responsive website behaves on different screen sizes.
-
-And if you want to knock the grade for testing all the way up to the max:
-
-## 4. Manually go though every part of your site and write out how you confirmed that each link, hover effect and other interactive parts of the site work as you expect.
-
-## 5. List any bugs you came across while creating the site and while Testing
-
----
-
 ## Testing
 
 To return to the previous document, please click [here](https://github.com/veraleitaodev/setGoals/blob/master/README.md).

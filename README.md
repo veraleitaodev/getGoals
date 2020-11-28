@@ -62,6 +62,8 @@ This platform will enable users to create their goals, store them, edit or delet
 
   - [Goal page in mobile view](static/images/wireframes/goalPage_mobile.png "wireframe for New Goal page in mobile view");
 
+Wireframes had been an excellent starting point to this project however, after having login and my goals page in place I have realised that the project would benefit from having a home page and a SMART page, where a visiting user could fill inspired in using the app.
+
 ## Features
 
 - Responsive on multiple device sizes
@@ -142,4 +144,4 @@ Please refer to [testing.md](testing.md) file to find the report on the testing 
 - RegEx code to validate email address obtained from https://stackoverflow.com/questions/17464404/html5-pattern-attribute-not-matching-for-emailusergmail-com
 - upload image file section in new-goal.html - code obtained from https://codepen.io/opznhaarlems/pen/mKymJy and adapted to this Project
 - information in smart.html obtained from https://www.ucop.edu/local-human-resources/_files/performance-appraisal/How%20to%20write%20SMART%20Goals%20v2.pdf
-- code obtained from  https://stackoverflow.com/questions/33424138/how-to-remove-a-div-with-fade-out-effect-in-javascript to fade out and hide flash message
+- code obtained from  https://stackoverflow.com/questions/553402/how-to-fadeout-remove-a-div-in-jquery to fade out and hide flash message
