@@ -297,11 +297,9 @@ button.btn.edit-submit-button {
   a.brand-logo {
     font-size: 32px;
   }
-  .parallax-container {
-      height: 500px;
-  }
+
   .parallax-container.container-1 {
-  height: 500px;
+  height: 400px;
 }
 }
 /* Small devices (landscape phones, more than 576px)*/
@@ -323,4 +321,29 @@ button.btn.edit-submit-button {
   i.tooltipped {
     font-size: 18px;
   }
+  .parallax-container.container-1 {
+  height: 500px;
+  }
+  .parallax-container.container-2 {
+  height: 300px;
 }
+
+}
+
+/* Medium devices (tablets, more than 1024px)*/
+@media (min-width: 1024px) {
+  
+  .nav-wrapper a {
+    font-size: 16px;
+  }
+  .nav-wrapper a.brand-logo {
+    font-size: 46px;
+  }
+  i.tooltipped {
+    font-size: 20px;
+  }
+  .parallax-container.container-1 {
+  height: 550px;
+  }
+}
+
