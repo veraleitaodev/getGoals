@@ -215,12 +215,12 @@ def delete_goal(goal_id):
     return redirect(url_for("set_goals"))
 
 
-@app.route('/how_to')
-def how_to():
+@app.route('/SMART')
+def smart():
     """
-    renders how to page
+    renders smart page
     """
-    return render_template('how-to.html')
+    return render_template('smart.html')
 
 
 if __name__ == "__main__":

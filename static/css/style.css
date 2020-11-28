@@ -196,7 +196,7 @@ a.btn-floating {
 
 /*-- SMART page --*/
 
-.image-how-to {
+.image-smart {
   background-color: var(--color-8);
   background-image: url("../images/how-smart.png");
   background-repeat: no-repeat;
@@ -205,12 +205,12 @@ a.btn-floating {
   min-height: 150px;
 }
 
-.how-to .collapsible-body {
+.smart .collapsible-body {
     background-color: var(--color-10);
     color: var(--color-8);
 }
 
-.how-to i.material-icons {
+.smart i.material-icons {
     color: var(--color-5);
     text-shadow: 2px 2px 2px var(--color-9);
 }
