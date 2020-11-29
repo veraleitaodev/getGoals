@@ -1,13 +1,13 @@
+![responsive app](static/images/multiple-devices.jpeg)
+
 <h1 align="center">SetGoals</h1>
 
 [View the live project here.](http://set-goals-vl.herokuapp.com)
 
 This is the website built to meet the requirements for milestone 3 of fullstack developer diploma at Code Institute. It is designed to be responsive and accessible on a range of devices, making it easy to navigate for users and visiting users.
 
-I aim to develop and test a platform where the user can plan life goals. Having in consideration cliches such as “Failing to plan is planning to fail” or “You become what you think about most of the time”, it becomes aparent the relevance of having life goals.  
-This platform will enable users to create their goals, store them, edit or delete them from the my goals list. As a future feature, the app would include a forum where different users could post their achievements or discuss hurdles, or points of view to increase users interaction with the app. Another feature that had not been included would be the upload of images into the goal card as create an image board with the collection of images. For this feature I would need to use technology that I have not learned yet, as MongoDB BSON documents are capped at 16 MB.
-
-![responsive app](static/images/multiple-devices.jpeg)
+I aim to develop and test a platform where the user can plan life goals. Users will be looking to take control of their lives and would have listened talkers or have read books that had encouraged planning and goal setting. Ideas such as “He who fails to plan is planning to fail.” by Winston Churchill or “We become what we think about most of the time” by Earl Nightingale support the need to set goals.  
+This platform will enable users to create their goals, store them, edit or delete them from the my goals page. As a future feature, the app would include a forum where different users could post their achievements or discuss hurdles, or points of view to increase users interaction with the app. Another feature that had not been included would be the upload of images into the goal card as create an image board with the collection of images. For this feature I would need to use technology that I have not learned yet, as MongoDB BSON documents are capped at 16 MB.
 
 ## User Experience (UX)
 
@@ -71,7 +71,7 @@ Wireframes had been an excellent starting point to this project however, after h
 - Interactive elements
     - Materialize Navigation bar with sidenav for mobile view and small tablets
     - Materialize Footer with links for homepage and social media
-    - Materialize parallax feature to add beauty to the app and allude to "seing the road ahead" - in home page
+    - Materialize parallax feature to add beauty to the app and allude to "seeing the road ahead" - in home page
     - Logo in navbar redirects to home page
     - Links in navbar redirect user to the corresponding pages
     - Materialize pulse button in home page to call attention to the word SMART - once clicked it will redirect to the SMART? page
@@ -133,13 +133,90 @@ Wireframes had been an excellent starting point to this project however, after h
 17. [Undraw:](https://undraw.co/)
     - To obtain SVG illustrations with colour scheme of the project, used in Home, SMART and My Goals pages.
 
-## Testing
+##  Testing
 
 Please refer to [testing.md](testing.md) file to find the report on the testing carried out in this project.
 
-## 6. Deployment
+---
 
-## 7. Credits
+##  Deployment
+
+SetGoals was developed using Gitpod and GitHub to host the repository.
+
+### Local Deployment
+To be able to run this project, the following tools have to be installed:
+- An IDE - for this project it was used [GitPod](https://www.gitpod.io/)
+- to create the database [MongoDB Atlas](https://www.mongodb.com/)
+- [Git](https://git-scm.com/)
+- [PIP](https://pip.pypa.io/en/stable/installing/) 
+- [Python](https://www.python.org/)   
+#### Directions
+1. You can clone this repository directly into the editor of your choice by pasting the following command into the terminal:   
+`git clone https://github.com/veraleitaodev/setGoals.git`    
+Alternatively, you can save a copy of this repository by clicking the green button "Clone or download" , then "Download Zip" button, and after extract the Zip file to your folder.
+2. In the terminal window change directory (CD) to the correct file location (directory that you have just created).
+3. Set up environment variables:
+    - Create **.env** file in the root directory.
+    - On the top of the file add `import os` to set the environment variables in the operating system.
+    - Set the connection to your MongoDB database(MONGO_URI) and a SECRET_KEY with the following syntax:
+    `os.environ["SECRET_KEY"] = "YourSecretKey"`   
+    `os.environ["MONGO_URI"] = "YourMongoURI"`  
+    .
+4. Install all requirements from the __requirements.txt__ file putting this command into your terminal:   
+`pip3 install -r requirements.txt`  
+*Note: GitPod does not require `sudo`, so if you use another IDE, you will need to include `sudo` in the beginning of the command: `sudo pip3 install -r requirements.txt`.*
+5. Create a new Database called "setGoals" in [MongoDB Atlas](https://www.mongodb.com/).   
+6. In "setGoals" database create the three following collections:
+##### categories
+```
+_id: <ObjectId>
+category_name: <String>
+```
+##### goals
+```
+_id: <ObjectId>
+goal_title:  <String>
+category_name: <String>
+goal_description: <String>
+due_date: <String>
+author: <String>
+```
+##### Users
+```
+_id: <ObjectId>
+username: <String>
+password: <String>
+```
+7. You will now be able to run the application using the following command `python3 run.py`.   
+
+### Heroku Deployment
+To deploy the project to [Heroku](https://heroku.com/) the following steps need to be completed:
+1. Create a **requirement.txt** file, which contains a list of the dependencies, using the following command in the terminal:  
+`pip3 freeze > requirements.txt`
+2. Create a **Procfile**, in order to tell Heroku how to run the project, using the following command in the terminal:   
+`echo web: python run.py > Procfile`
+3. `git add`, `git commit` and `git push` these files to GitHub repository
+4. Create a **new app** in Heroku, assigning a name (must be unique) and set a region (for my project I set Europe)
+5. From the Heroku dashboard link the new Heroku app to your GitHub repository:    
+    - "Deploy" -> "Deployment method" -> "GitHub"
+    - then "Enable automatic deployment"
+6. To start the web process, put the following command into the terminal: `heroku ps:scale web=1` to scale dynos
+7. In the **Settings** tab of the new Heroku app, click on "Reveal Config Vars" and set the following config vars:
+    - **IP** : 0.0.0.0
+    - **PORT** : 8080
+    - **MONGO_URI** : `<link to your MongoDB database>`
+    - **SECRET_KEY** : `<your secret key>`
+    - **DEBUG**: **FALSE**  
+*Note: your MONGO_URI and SECRET_KEY must match the ones you entered in .env.py file*
+
+8. The app will be deployed and ready to run. Click "Open App" to view the app.   
+
+**Note**: if you have not linked GitHub and Heroku following step N.5, alternatively as the last step of deployment, you can put the following command into your terminal:   
+ `heroku login`, after a successful log in `git push heroku master` - to push the app to Heroku, and finally click "Open App" in Heroku dashboard to view the app.
+
+---
+
+##  Credits
 
 - RegEx code to validate email address obtained from https://stackoverflow.com/questions/17464404/html5-pattern-attribute-not-matching-for-emailusergmail-com
 - upload image file section in new-goal.html - code obtained from https://codepen.io/opznhaarlems/pen/mKymJy and adapted to this Project
