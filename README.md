@@ -144,74 +144,95 @@ Please refer to [testing.md](testing.md) file to find the report on the testing 
 SetGoals was developed using Gitpod and GitHub to host the repository.
 
 ### Local Deployment
-To be able to run this project, the following tools have to be installed:
-- An IDE - for this project it was used [GitPod](https://www.gitpod.io/)
-- to create the database [MongoDB Atlas](https://www.mongodb.com/)
-- [Git](https://git-scm.com/)
-- [PIP](https://pip.pypa.io/en/stable/installing/) 
-- [Python](https://www.python.org/)   
+For local deployment, you need to have an IDE such as Gitpod and you need to install the following in your IDE:
+- An IDE - for this project it was used GitPod
+- to create the database was used MongoDB Atlas
+- Git, Python3, PIP3
+  
 #### Directions
-1. You can clone this repository directly into the editor of your choice by pasting the following command into the terminal:   
-`git clone https://github.com/veraleitaodev/setGoals.git`    
-Alternatively, you can save a copy of this repository by clicking the green button "Clone or download" , then "Download Zip" button, and after extract the Zip file to your folder.
-2. In the terminal window change directory (CD) to the correct file location (directory that you have just created).
-3. Set up environment variables:
-    - Create **.env** file in the root directory.
+
+##### Cloning repository using command line
+
+1. You can save a copy of this repository:
+On GitHub, navigate to the main page of the repository. Above the list of files, click  Code then "Download Zip" button, and after extract the Zip file to your folder.
+
+2. Open Terminal.
+
+3. Change the current working directory to the location where you want the cloned directory.
+
+4. Type git clone, and then paste the URL you copied earlier.
+
+    $ git clone https://github.com/veraleitaodev/setGoals.git
+    Press Enter to create your local clone.
+
+5. Now create a Database that you intend to use for this cloned project with MongoDB. 
+
+6. Create a new Database called "setGoals" in [MongoDB Atlas](https://www.mongodb.com/).   
+7. In "setGoals" database create the three following collections:
+    ##### categories
+    ```
+    _id: <ObjectId>
+    category_name: <String>
+    ```
+    ##### goals
+    ```
+    _id: <ObjectId>
+    goal_title:  <String>
+    category_name: <String>
+    goal_description: <String>
+    due_date: <String>
+    author: <String>
+    ```
+    ##### Users
+    ```
+    _id: <ObjectId>
+    username: <String>
+    password: <String>
+    ```
+
+8. Return to the Terminal and enter the following to install all required dependencies:
+```
+pip3 install -r requirements.txt
+```
+*Note: GitPod does not require `sudo`, so if you use another IDE, you will need to include `sudo` in the beginning of the command: `sudo pip3 install -r requirements.txt`.*
+
+9. Set up environment variables:
+    - Create __.env__ file in the root directory.
     - On the top of the file add `import os` to set the environment variables in the operating system.
     - Set the connection to your MongoDB database(MONGO_URI) and a SECRET_KEY with the following syntax:
     `os.environ["SECRET_KEY"] = "YourSecretKey"`   
     `os.environ["MONGO_URI"] = "YourMongoURI"`  
-    .
-4. Install all requirements from the __requirements.txt__ file putting this command into your terminal:   
-`pip3 install -r requirements.txt`  
-*Note: GitPod does not require `sudo`, so if you use another IDE, you will need to include `sudo` in the beginning of the command: `sudo pip3 install -r requirements.txt`.*
-5. Create a new Database called "setGoals" in [MongoDB Atlas](https://www.mongodb.com/).   
-6. In "setGoals" database create the three following collections:
-##### categories
-```
-_id: <ObjectId>
-category_name: <String>
-```
-##### goals
-```
-_id: <ObjectId>
-goal_title:  <String>
-category_name: <String>
-goal_description: <String>
-due_date: <String>
-author: <String>
-```
-##### Users
-```
-_id: <ObjectId>
-username: <String>
-password: <String>
-```
-7. You will now be able to run the application using the following command `python3 run.py`.   
+  
+10. You will now be able to run the application using the following command `python3 run.py`. 
 
-### Heroku Deployment
+Find information about deploying a repository [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
+##### Heroku Deployment
+
 To deploy the project to [Heroku](https://heroku.com/) the following steps need to be completed:
-1. Create a **requirement.txt** file, which contains a list of the dependencies, using the following command in the terminal:  
+
+1. Create or update __requirement.txt__ file using the following command in the terminal:  
 `pip3 freeze > requirements.txt`
-2. Create a **Procfile**, in order to tell Heroku how to run the project, using the following command in the terminal:   
+
+2. Create a __Procfile__ using the following command in the terminal:   
 `echo web: python run.py > Procfile`
+    (__remember__ to use capital P);  
+    delete extra line at the bottom in Procfile as it might cause problems;
+
 3. `git add`, `git commit` and `git push` these files to GitHub repository
-4. Create a **new app** in Heroku, assigning a name (must be unique) and set a region (for my project I set Europe)
-5. From the Heroku dashboard link the new Heroku app to your GitHub repository:    
-    - "Deploy" -> "Deployment method" -> "GitHub"
-    - then "Enable automatic deployment"
-6. To start the web process, put the following command into the terminal: `heroku ps:scale web=1` to scale dynos
-7. In the **Settings** tab of the new Heroku app, click on "Reveal Config Vars" and set the following config vars:
-    - **IP** : 0.0.0.0
-    - **PORT** : 8080
-    - **MONGO_URI** : `<link to your MongoDB database>`
-    - **SECRET_KEY** : `<your secret key>`
-    - **DEBUG**: **FALSE**  
-*Note: your MONGO_URI and SECRET_KEY must match the ones you entered in .env.py file*
 
-8. The app will be deployed and ready to run. Click "Open App" to view the app.   
+4. Create a __new app__ in Heroku, assigning a unique name and set a region (for SetGoals i had set Europe)
 
-**Note**: if you have not linked GitHub and Heroku following step N.5, alternatively as the last step of deployment, you can put the following command into your terminal:   
+5. Set up automatic deployment by adding environment variables to settings:
+    -   click on the __settings__ and then click on __"Reveal Config Vars"__ and set the following vars:
+        -   __IP__ : 0.0.0.0
+        -   __PORT__ : 8080
+        -   __MONGO_URI__ : `<link to MongoDB database>`
+        -   __SECRET_KEY__ : `<secret key>`
+        -   __DEBUG__: __FALSE__  
+
+6. The app will be deployed and ready to run. Click "Open App" to view the app.   
+  
  `heroku login`, after a successful log in `git push heroku master` - to push the app to Heroku, and finally click "Open App" in Heroku dashboard to view the app.
 
 ---
