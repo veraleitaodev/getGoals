@@ -56,7 +56,13 @@ The W3C Markup Validator, W3C CSS Validator Services, pylint comand and js lint 
 
 #### HTML
 
-- [W3C Markup Validator](https://validator.w3.org/) - [Results](https://github.com/)
+- [W3C Markup Validator](https://validator.w3.org/) Results: 
+    -   [http://set-goals-vl.herokuapp.com/](static/bugs/html_validator_index.jpeg)
+    -   [http://set-goals-vl.herokuapp.com/home](static/bugs/htmlValidator_home.jpeg)
+    -   [http://set-goals-vl.herokuapp.com/set_goals](static/bugs/htmlValidator_set_goals.jpeg)
+    -   [http://set-goals-vl.herokuapp.com/set_goals?username...](static/bugs/htmlValidator_set_goals_user.jpeg)
+    -   [http://set-goals-vl.herokuapp.com/SMART](static/bugs/html_validator_smart.jpeg)
+    -   [http://set-goals-vl.herokuapp.com/register](static/bugs/html_validator_register.jpeg)
 
 #### CSS
 
