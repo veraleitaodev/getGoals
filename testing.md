@@ -63,14 +63,18 @@ The W3C Markup Validator, W3C CSS Validator Services, pylint comand and js lint 
     -   [http://set-goals-vl.herokuapp.com/set_goals?username...](static/bugs/htmlValidator_set_goals_user.jpeg)
     -   [http://set-goals-vl.herokuapp.com/SMART](static/bugs/html_validator_smart.jpeg)
     -   [http://set-goals-vl.herokuapp.com/register](static/bugs/html_validator_register.jpeg)
+    -   [http://set-goals-vl.herokuapp.com/new_goal with error](static/bugs/html_validator_newGoal1.jpeg)
+    -   [http://set-goals-vl.herokuapp.com/SMART](static/bugs/html_validator_smart.jpeg)
 
 #### CSS
 
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/)
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](static/bugs/cssValidator.jpeg), [warnings](static/bugs/cssValidator_warnings.jpeg)
+    - vendor extentions are proprietary code and appear as a warning in css validator, however they have been use to optimise the display of images in different browsers and to make css code cleaner with use of var for colour scheme.
 
 #### Python
 
-- [pylint comand] () - [Results](https://github.com/)
+- pylint comand - [Results](static/bugs/pythonLint.jpeg)
+    - else after return is identified as unnecessary in the code but without that else condition whenever the username would be correct and the password incorrect, the user would be redirect to the login page without the flash message, this is the reason why I have kept the else condition
 
 #### Javascript
 

@@ -1,13 +1,17 @@
 $(document).ready(function () {
   //code for navbar from maximize library
   $(".sidenav").sidenav();
+  //code for dropdown form from maximize library
   $("select").formSelect();
+  //code for SMART collapsible text boxes from maximize library
   $(".collapsible").collapsible();
+  //code for edit and delete icons from maximize library
   $(".tooltipped").tooltip();
-  $(document).ready(function () {
-    $(".datepicker").datepicker();
-  });
+  //code for date input in input form from maximize library
+  $(".datepicker").datepicker();
+  //code for home page parallax from maximize library
   $(".parallax").parallax();
+  //code for confirmation modal used in delete from maximize library
   $(".modal").modal();
   // Alert boxs
   $(".upload-image").click(function () {
