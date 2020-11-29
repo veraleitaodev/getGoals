@@ -242,4 +242,4 @@ To deploy the project to [Heroku](https://heroku.com/) the following steps need 
 -   I have written the code for the project with inspiration in the materials learnt at code institute and the use of libraries such as Materialize, as mentioned in this document.
 -   Cloning information sourced from [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository);
 -   Information in smart.html obtained from [here](https://www.ucop.edu/local-human-resources/_files/performance-appraisal/How%20to%20write%20SMART%20Goals%20v2.pdf);
--   Code obtained from [stackoverflow] (https://stackoverflow.com/questions/553402/how-to-fadeout-remove-a-div-in-jquery) to fade out and hide flash message.
+-   Code obtained from [stackoverflow](https://stackoverflow.com/questions/553402/how-to-fadeout-remove-a-div-in-jquery) to fade out and hide flash message.
