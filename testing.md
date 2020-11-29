@@ -78,13 +78,14 @@ The W3C Markup Validator, W3C CSS Validator Services, pylint comand and js lint 
 
 #### Javascript
 
-- [js lint Validator](http://jslint.com/) - [Results](https://github.com/)
+- [js lint Validator](http://jslint.com/) - [Results](static/bugs/jsValidator.jpeg), [warnings](static/bugs/jsValidator_warnings.jpeg)
+    - js lint identified the $ as undeclared - the $ is used to access jQuery.
 
 ### Compatibility tests
 
 #### Using different browsers
 
-- The app was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers
+- The app was tested on Google Chrome, Opera, Firefox and Safari browsers
 
 #### Using different devices
 
@@ -386,7 +387,7 @@ form test
 - Once on collapible navbar menu the menu would not expand - console showing error. This was corrected by correcting the jquery script in the base.html.
 - Once testing register.html by input new details in form the error "AttributeError: 'NoneType' object has no attribute 'lower'" would repeatedly appear. Checked mongodb key on heroku, mongodb and eny.py document but all ok.  
 I have ried changing collection names but no different until realised that there was no "name" property in username input in register.html. Once corrected this the form worked.
-- card layout on goals.html: icons for edit and delete too small as found in lighthouse tool found in inspect developer tools in chrome browser [(screenshot of analysis)](static/images/bugs/edit-delete-bug.jpeg "lighthouse analysis regards my goals page").
+- card layout on goals.html: icons for edit and delete too small as found in [lighthouse tool](static/bugs/edit-delete-bug.jpeg) found in inspect developer tools in chrome browser [(screenshot of analysis)](static/images/bugs/edit-delete-bug.jpeg "lighthouse analysis regards my goals page").
 - delete will delete the card in front instead of the card that suposed to delete. to resolve this issue added {{ loop.index }} to icon id and modal followed by tabindex="-1" to correct the bug.
 
 #### Bugs unresolved
